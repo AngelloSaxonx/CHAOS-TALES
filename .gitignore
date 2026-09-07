@@ -58,5 +58,3 @@ Temporary Items
 *.resource_order
 *.old
 
-# GMRT build directory
-Build

@@ -35,3 +35,5 @@ global.cutscenes[$ "rouge pastry"] =
 	new scr_text("And bags of various fruits",[ #ffffff],[0],[0],[0],[1],[0],[0],[0]),
 	new scr_text("Will you enter the shop?",[ #ffffff],[0],[0],[0],[1],[0],[0],[0])
 ]
+
+// Autumn Cemetery
