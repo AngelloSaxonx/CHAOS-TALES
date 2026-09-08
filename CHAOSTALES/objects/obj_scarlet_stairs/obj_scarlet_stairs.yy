@@ -29,10 +29,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_scarlet_stairs",
-    "path":"sprites/spr_scarlet_stairs/spr_scarlet_stairs.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

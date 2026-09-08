@@ -29,10 +29,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_scarlet_statue_a",
-    "path":"sprites/spr_scarlet_statue_a/spr_scarlet_statue_a.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

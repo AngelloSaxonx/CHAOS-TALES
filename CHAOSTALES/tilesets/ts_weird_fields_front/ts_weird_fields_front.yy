@@ -8,7 +8,7 @@
     "TileSerialiseData":[],
   },
   "name":"ts_weird_fields_front",
-  "out_columns":5,
+  "out_columns":7,
   "out_tilehborder":2,
   "out_tilevborder":2,
   "parent":{
@@ -18,8 +18,8 @@
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",
   "spriteId":{
-    "name":"spr_weird_fields",
-    "path":"sprites/spr_weird_fields/spr_weird_fields.yy",
+    "name":"spr_darkfields",
+    "path":"sprites/spr_darkfields/spr_darkfields.yy",
   },
   "spriteNoExport":false,
   "textureGroupId":{
@@ -34,5 +34,5 @@
   "tileWidth":20,
   "tilexoff":0,
   "tileyoff":0,
-  "tile_count":24,
+  "tile_count":50,
 }
