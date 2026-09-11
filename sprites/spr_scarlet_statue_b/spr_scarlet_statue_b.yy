@@ -1,6 +1,6 @@
 {
   "$GMSprite":"v2",
-  "%Name":"spr_scarlet_statue_tale",
+  "%Name":"spr_scarlet_statue_b",
   "bboxMode":2,
   "bbox_bottom":39,
   "bbox_left":0,
@@ -27,7 +27,7 @@
   "layers":[
     {"$GMImageLayer":"","%Name":"fbc4d27c-d0d8-4bfe-97c3-4e23d41f0a33","blendMode":0,"displayName":"default","isLocked":false,"name":"fbc4d27c-d0d8-4bfe-97c3-4e23d41f0a33","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"spr_scarlet_statue_tale",
+  "name":"spr_scarlet_statue_b",
   "nineSlice":null,
   "origin":7,
   "parent":{
@@ -39,7 +39,7 @@
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"v1",
-    "%Name":"spr_scarlet_statue_tale",
+    "%Name":"spr_scarlet_statue_b",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -63,7 +63,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"spr_scarlet_statue_tale",
+    "name":"spr_scarlet_statue_b",
     "playback":1,
     "playbackSpeed":0.0,
     "playbackSpeedType":0,
@@ -75,25 +75,25 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"5d0c9226-329b-44df-b623-147217ae6a06","path":"sprites/spr_scarlet_statue_tale/spr_scarlet_statue_tale.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"5d0c9226-329b-44df-b623-147217ae6a06","path":"sprites/spr_scarlet_statue_b/spr_scarlet_statue_b.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"948e730e-c8e2-4979-9e9a-9148f11a6283","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"b8c85808-fbd6-4473-a51c-e446636e0def","path":"sprites/spr_scarlet_statue_tale/spr_scarlet_statue_tale.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"b8c85808-fbd6-4473-a51c-e446636e0def","path":"sprites/spr_scarlet_statue_b/spr_scarlet_statue_b.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"cd69c41a-2dd7-4d14-8a7b-4c5efd4dd8c0","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"e9303281-735a-4aff-a9cf-e4210f7bfa95","path":"sprites/spr_scarlet_statue_tale/spr_scarlet_statue_tale.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"e9303281-735a-4aff-a9cf-e4210f7bfa95","path":"sprites/spr_scarlet_statue_b/spr_scarlet_statue_b.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"06fe15b3-f2c5-4dce-bb4e-dd2244bb5b6e","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"27e1b8f5-a6ba-4249-be5d-c01e35957be6","path":"sprites/spr_scarlet_statue_tale/spr_scarlet_statue_tale.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"27e1b8f5-a6ba-4249-be5d-c01e35957be6","path":"sprites/spr_scarlet_statue_b/spr_scarlet_statue_b.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"287c7195-537b-4408-8e6e-0f03518f8ed5","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"347ef243-e937-40d3-9d5c-8e87d3531474","path":"sprites/spr_scarlet_statue_tale/spr_scarlet_statue_tale.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"347ef243-e937-40d3-9d5c-8e87d3531474","path":"sprites/spr_scarlet_statue_b/spr_scarlet_statue_b.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"7591d6e2-d330-4d4f-868c-642b7311f4da","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"6daafce5-6c78-49a7-9014-38bb0650e391","path":"sprites/spr_scarlet_statue_tale/spr_scarlet_statue_tale.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"6daafce5-6c78-49a7-9014-38bb0650e391","path":"sprites/spr_scarlet_statue_b/spr_scarlet_statue_b.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"8102addf-0f1a-40d5-9df9-611cdc23c944","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"3620abf8-7985-4a86-8d9b-912800371dd9","path":"sprites/spr_scarlet_statue_tale/spr_scarlet_statue_tale.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"3620abf8-7985-4a86-8d9b-912800371dd9","path":"sprites/spr_scarlet_statue_b/spr_scarlet_statue_b.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"67d5d645-d8fd-415b-85ac-5f7a57fbe2aa","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],

@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"obj_scarlet_statue_red",
+  "%Name":"obj_scarlet_statue_b",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_scarlet_statue_red",
+  "name":"obj_scarlet_statue_b",
   "overriddenProperties":[],
   "parent":{
     "name":"Scarlet Fields",
@@ -30,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_scarlet_statue_tale",
-    "path":"sprites/spr_scarlet_statue_tale/spr_scarlet_statue_tale.yy",
+    "name":"spr_scarlet_statue_b",
+    "path":"sprites/spr_scarlet_statue_b/spr_scarlet_statue_b.yy",
   },
   "spriteMaskId":null,
   "visible":true,
