@@ -45,7 +45,7 @@
   "origin":7,
   "parent":{
     "name":"Effects",
-    "path":"folders/Sprites/Characters/Flower/Effects.yy",
+    "path":"folders/Sprites/Characters/Party/Flower/Effects.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

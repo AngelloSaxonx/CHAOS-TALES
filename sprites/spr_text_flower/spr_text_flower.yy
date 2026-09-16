@@ -26,7 +26,7 @@
   "origin":4,
   "parent":{
     "name":"Dialogue",
-    "path":"folders/Sprites/Characters/Flower/Dialogue.yy",
+    "path":"folders/Sprites/Characters/Party/Flower/Dialogue.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

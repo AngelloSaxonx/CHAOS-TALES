@@ -29,7 +29,7 @@
   "origin":7,
   "parent":{
     "name":"flower_stab",
-    "path":"folders/Sprites/Characters/Flower/Movement/flower_stab.yy",
+    "path":"folders/Sprites/Characters/Party/Flower/Movement/flower_stab.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

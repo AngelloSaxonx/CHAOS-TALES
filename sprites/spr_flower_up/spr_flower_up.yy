@@ -26,7 +26,7 @@
   "origin":7,
   "parent":{
     "name":"Cutscene",
-    "path":"folders/Sprites/Characters/Flower/Cutscene.yy",
+    "path":"folders/Sprites/Characters/Party/Flower/Cutscene.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

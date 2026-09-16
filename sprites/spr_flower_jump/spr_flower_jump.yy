@@ -31,7 +31,7 @@
   "origin":7,
   "parent":{
     "name":"Movement",
-    "path":"folders/Sprites/Characters/Flower/Movement.yy",
+    "path":"folders/Sprites/Characters/Party/Flower/Movement.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
