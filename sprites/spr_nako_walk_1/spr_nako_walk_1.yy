@@ -1,10 +1,10 @@
 {
   "$GMSprite":"v2",
-  "%Name":"spr_nako",
+  "%Name":"spr_nako_walk_1",
   "bboxMode":0,
   "bbox_bottom":39,
-  "bbox_left":2,
-  "bbox_right":23,
+  "bbox_left":3,
+  "bbox_right":24,
   "bbox_top":7,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -13,8 +13,7 @@
   "For3D":false,
   "frames":[
     {"$GMSpriteFrame":"v1","%Name":"01093ce9-b1d2-4f1c-a3f3-9f915fda7079","name":"01093ce9-b1d2-4f1c-a3f3-9f915fda7079","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"v1","%Name":"010a28a3-d0ed-4aea-9186-f81be5acc18f","name":"010a28a3-d0ed-4aea-9186-f81be5acc18f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"v1","%Name":"bfc27e7c-e334-4d32-969f-0349c1f42969","name":"bfc27e7c-e334-4d32-969f-0349c1f42969","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"89eb8fd1-9522-483b-a11d-3e51bf2aff8a","name":"89eb8fd1-9522-483b-a11d-3e51bf2aff8a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":20,
   "gridY":20,
@@ -23,7 +22,7 @@
   "layers":[
     {"$GMImageLayer":"","%Name":"6722eefe-68f4-4a98-84ea-5020a0e34bcf","blendMode":0,"displayName":"default","isLocked":false,"name":"6722eefe-68f4-4a98-84ea-5020a0e34bcf","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"spr_nako",
+  "name":"spr_nako_walk_1",
   "nineSlice":null,
   "origin":7,
   "parent":{
@@ -35,7 +34,7 @@
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"v1",
-    "%Name":"spr_nako",
+    "%Name":"spr_nako_walk_1",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -51,7 +50,7 @@
     },
     "eventStubScript":null,
     "eventToFunction":{},
-    "length":3.0,
+    "length":2.0,
     "lockOrigin":false,
     "moments":{
       "$KeyframeStore<MomentsEventKeyframe>":"",
@@ -59,7 +58,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"spr_nako",
+    "name":"spr_nako_walk_1",
     "playback":1,
     "playbackSpeed":8.0,
     "playbackSpeedType":0,
@@ -73,14 +72,11 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"01093ce9-b1d2-4f1c-a3f3-9f915fda7079","path":"sprites/spr_nako/spr_nako.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"01093ce9-b1d2-4f1c-a3f3-9f915fda7079","path":"sprites/spr_nako_walk_1/spr_nako_walk_1.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"cccc8595-0a5a-4cf3-9249-87d36ba56252","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"010a28a3-d0ed-4aea-9186-f81be5acc18f","path":"sprites/spr_nako/spr_nako.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"17a76540-d575-40b3-846e-7cc13ece0c4e","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"bfc27e7c-e334-4d32-969f-0349c1f42969","path":"sprites/spr_nako/spr_nako.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"1de79464-166d-44e0-8865-92655468644a","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"89eb8fd1-9522-483b-a11d-3e51bf2aff8a","path":"sprites/spr_nako_walk_1/spr_nako_walk_1.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"a04397bd-dd6c-47e4-9110-d5c0fc65440e","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
