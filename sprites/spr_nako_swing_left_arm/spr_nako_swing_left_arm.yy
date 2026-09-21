@@ -28,8 +28,8 @@
   "nineSlice":null,
   "origin":7,
   "parent":{
-    "name":"nake_swing",
-    "path":"folders/Sprites/Characters/Scarlet Fields/Enemies/Nako/Movement/nake_swing.yy",
+    "name":"nako_swing",
+    "path":"folders/Sprites/Characters/Scarlet Fields/Enemies/Nako/Movement/Attacks/nako_swing.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
