@@ -162,7 +162,7 @@
     {"id":{"name":"rm_scarlet_puzzle_1","path":"rooms/rm_scarlet_puzzle_1/rm_scarlet_puzzle_1.yy",},},
     {"id":{"name":"rm_scarlet_save_1","path":"rooms/rm_scarlet_save_1/rm_scarlet_save_1.yy",},},
     {"id":{"name":"rm_titlescreen","path":"rooms/rm_titlescreen/rm_titlescreen.yy",},},
-    {"id":{"name":"Test","path":"rooms/Test/Test.yy",},},
+    {"id":{"name":"Test_1","path":"rooms/Test_1/Test_1.yy",},},
     {"id":{"name":"Key_word","path":"scripts/Key_word/Key_word.yy",},},
     {"id":{"name":"scr_actions","path":"scripts/scr_actions/scr_actions.yy",},},
     {"id":{"name":"scr_anim_jump","path":"scripts/scr_anim_jump/scr_anim_jump.yy",},},
@@ -265,8 +265,8 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"Test","path":"rooms/Test/Test.yy",},},
     {"roomId":{"name":"rm_titlescreen","path":"rooms/rm_titlescreen/rm_titlescreen.yy",},},
+    {"roomId":{"name":"Test_1","path":"rooms/Test_1/Test_1.yy",},},
     {"roomId":{"name":"rm_darkfields_1","path":"rooms/rm_darkfields_1/rm_darkfields_1.yy",},},
     {"roomId":{"name":"rm_darkfields_2","path":"rooms/rm_darkfields_2/rm_darkfields_2.yy",},},
     {"roomId":{"name":"rm_scarlet_intro","path":"rooms/rm_scarlet_intro/rm_scarlet_intro.yy",},},
