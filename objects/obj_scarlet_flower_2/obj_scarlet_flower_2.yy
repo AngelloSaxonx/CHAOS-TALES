@@ -1,20 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_scarlet_climb",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_scarlet_flower_2",
+  "eventList":[],
   "managed":true,
-  "name":"obj_scarlet_climb",
+  "name":"obj_scarlet_flower_2",
   "overriddenProperties":[],
   "parent":{
-    "name":"Climb",
-    "path":"folders/Objects/Gameplay/Climb.yy",
+    "name":"Scarlet Fields",
+    "path":"folders/Objects/Gameplay/Scarlet Fields.yy",
   },
-  "parentObjectId":{
-    "name":"obj_climb",
-    "path":"objects/obj_climb/obj_climb.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -33,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_scarlet_climb",
-    "path":"sprites/spr_scarlet_climb/spr_scarlet_climb.yy",
+    "name":"spr_scarlet_flower_2",
+    "path":"sprites/spr_scarlet_flower_2/spr_scarlet_flower_2.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -7,7 +7,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Climb",
-    "path":"folders/Objects/Climb.yy",
+    "path":"folders/Objects/Gameplay/Climb.yy",
   },
   "parentObjectId":null,
   "persistent":false,
