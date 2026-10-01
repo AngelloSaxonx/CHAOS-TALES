@@ -113,10 +113,11 @@ scr_state_idle = function()
 	
 	var coll = instance_place(x+(move_dir*move_spd[0]),y,obj_collision)
 	if ( (coll && (coll.bbox_top > bbox_top+1)))
-	&& !(instance_place(x,y+20,obj_collision))
+	&& !(instance_place(x,y+1,obj_collision))
 	{
-		var stop_if_up = collision_rectangle(coll.bbox_left,coll.bbox_top-1,coll.bbox_left+10,coll.bbox_top,obj_collision,false,true)
-		if (stop_if_up == noone) || (stop_if_up != noone && stop_if_up == id)
+		var stop_if_up = collision_rectangle(coll.bbox_left,coll.bbox_top-1,coll.bbox_right,coll.bbox_top,obj_collision,false,true)
+		if (stop_if_up == noone) || (stop_if_up != noone && stop_if_up == id) || (stop_if_up != noone && stop_if_up != id && 
+		((coll.bbox_right > stop_if_up.bbox_right && move_dir = -1) || (coll.bbox_left < stop_if_up.bbox_left && move_dir = 1)) )
 		{
 			state = scr_wall_recovery
 			xspd = 0;
@@ -214,7 +215,7 @@ scr_wall_recovery = function()
 		{yspd = -ledge_jspd; ledge_in = true}
 		if (yspd < 0)
 		{
-			if (image_index >= 6)
+			if (image_index >= image_number-2)
 			{
 				image_index = 2
 			}
@@ -235,7 +236,7 @@ scr_wall_recovery = function()
 			else
 			{
 				ledge_fall_time--;
-				if (image_index >= 6)
+				if (image_index >= image_number-2)
 				{
 					image_index = 2
 				}
@@ -248,12 +249,13 @@ scr_wall_recovery = function()
 			if (ledge_fall_time > 0)
 			{
 			if (ledge_fall_time > 5) {ledge_fall_time = 5}
-			image_index = 6
-			ledge_fall_time--;
+			image_index = image_number-1
+			image_speed = 0;
+			ledge_fall_time -= 0.5;
 			}
 			
-			if (image_index >= image_number)
-			{state = scr_state_idle; ledge_in = false;ledge_fall_time = 20;}
+			if (ledge_fall_time <= 0)
+			{image_speed = 1;state = scr_state_idle; ledge_in = false;ledge_fall_time = 20;}
 			xspd = 0
 		}
 		//Grav

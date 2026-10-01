@@ -116,7 +116,9 @@ if mp_grid_path(obj_grid.grid,path,x,y-offsetY,targetX,targetY-offsetTargetY,tru
 	{xspd = -1}
 	else if (x < xx)
 	{xspd = 1}
-	else
+	else if !(collision_rectangle(bbox_left-(xspd*pit_rangeX),ground_y1-jump_range_limitY,bbox_right-(xspd*pit_rangeX),ground_y1,obj_collision,false,true) &&
+	!collision_rectangle(bbox_left+(xspd*pit_rangeX),ground_y1-jump_range_limitY,bbox_right+(xspd*pit_rangeX),ground_y1,obj_collision,false,true) 
+	&& (ground_y1 > target.bbox_bottom-1))
 	{xspd = 0;}
 	
 	if instance_place(x,y+1+yspd,obj_collision)
@@ -131,8 +133,9 @@ if mp_grid_path(obj_grid.grid,path,x,y-offsetY,targetX,targetY-offsetTargetY,tru
 		{
 			text = 1
 			if (collision_rectangle(bbox_left-(3-(abs(xspd)*3))+(xspd*jump_rangeX),ground_y-jump_range_limitY+1,bbox_right+(3-(abs(xspd)*3))+(xspd*jump_rangeX),ground_y-1,obj_collision,false,true)
-			&& !collision_rectangle(bbox_left,ground_y-jump_rangeY,bbox_right,ground_y-1,obj_collision,false,true))
-			|| (!collision_rectangle(bbox_left+(xspd*pit_rangeX),ground_y1,bbox_right+(xspd*pit_rangeX),ground_y1+1,obj_collision,false,true) && (ground_y1 >= target.bbox_bottom-1))
+			&& !collision_rectangle(bbox_left,ground_y-jump_rangeY,bbox_right,ground_y-1,obj_collision,false,true))  
+			|| (!collision_rectangle(bbox_left+(xspd*pit_rangeX),ground_y1,bbox_right+(xspd*pit_rangeX),ground_y1+1,obj_collision,false,true)
+			&& (ground_y1 >= target.bbox_bottom-1))
 			{yspd = -jspd;}
 		}
 		else

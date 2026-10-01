@@ -1,9 +1,9 @@
 {
   "$GMSprite":"v2",
   "%Name":"spr_flower",
-  "bboxMode":0,
+  "bboxMode":2,
   "bbox_bottom":39,
-  "bbox_left":0,
+  "bbox_left":6,
   "bbox_right":21,
   "bbox_top":10,
   "collisionKind":1,

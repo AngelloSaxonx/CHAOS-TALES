@@ -53,7 +53,7 @@ function scr_movement(_use_grav = true, _use_term_vel = true){
             xspd = 0;
 		}
 	}
-	if (!in_transition)
+	if (!in_transition && !instance_exists(obj_textbox))
 	{
     x += xspd;
 	}

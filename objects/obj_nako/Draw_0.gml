@@ -16,5 +16,3 @@ if (from == noone)
 {
 	image_moving = 0;
 }
-
-

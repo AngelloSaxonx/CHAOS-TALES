@@ -5,6 +5,8 @@ attack_spr[1] = spr_nako_swing_body
 attack_spr[2] = spr_nako_swing_left_arm
 attack_spr[3] = spr_nako_swing_right_arm
 
+hitbox_Xsize = round((bbox_right-bbox_left))
+
 xspd = 0;
 yspd = 0;
 jspd = 6

@@ -1,7 +1,7 @@
 {
   "$GMSprite":"v2",
   "%Name":"spr_nako_walk",
-  "bboxMode":0,
+  "bboxMode":2,
   "bbox_bottom":39,
   "bbox_left":3,
   "bbox_right":24,
