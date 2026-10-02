@@ -110,7 +110,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2026.0.0.16",
+    "IDEVersion":"2024.14.3.217",
   },
   "name":"CHAOSTALES",
   "resources":[
@@ -126,9 +126,9 @@
     {"id":{"name":"obj_font_system","path":"objects/obj_font_system/obj_font_system.yy",},},
     {"id":{"name":"obj_grid","path":"objects/obj_grid/obj_grid.yy",},},
     {"id":{"name":"Obj_hitbox_flower_stab","path":"objects/Obj_hitbox_flower_stab/Obj_hitbox_flower_stab.yy",},},
-    {"id":{"name":"Obj_hitbox_nako_slash","path":"objects/Obj_hitbox_nako_slash/Obj_hitbox_nako_slash.yy",},},
     {"id":{"name":"obj_hurtbox","path":"objects/obj_hurtbox/obj_hurtbox.yy",},},
     {"id":{"name":"obj_interact","path":"objects/obj_interact/obj_interact.yy",},},
+    {"id":{"name":"obj_nako_slash_hitbox","path":"objects/obj_nako_slash_hitbox/obj_nako_slash_hitbox.yy",},},
     {"id":{"name":"obj_nako","path":"objects/obj_nako/obj_nako.yy",},},
     {"id":{"name":"obj_party","path":"objects/obj_party/obj_party.yy",},},
     {"id":{"name":"obj_path_blocker","path":"objects/obj_path_blocker/obj_path_blocker.yy",},},

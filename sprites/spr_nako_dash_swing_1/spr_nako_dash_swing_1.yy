@@ -23,7 +23,7 @@
   ],
   "name":"spr_nako_dash_swing_1",
   "nineSlice":null,
-  "origin":7,
+  "origin":4,
   "parent":{
     "name":"dash_swing",
     "path":"folders/Sprites/Characters/Scarlet Fields/Enemies/Nako/Movement/Attacks/dash_swing.yy",
@@ -78,7 +78,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":14,
-    "yorigin":40,
+    "yorigin":20,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

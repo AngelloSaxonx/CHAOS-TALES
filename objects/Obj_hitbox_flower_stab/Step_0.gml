@@ -26,7 +26,7 @@ else
 
 ds_list_clear(list)
 
-if (inst != noone) && (inst.hittable == true)  && (hitted == 0)
+if (inst != noone) && (inst.hittable == true)  && (hasHit == 0)
 {
 	var _face = image_xscale
 	var _power = knock_Dis
@@ -42,7 +42,7 @@ if (inst != noone) && (inst.hittable == true)  && (hitted == 0)
 		}
 		else{instance_destroy()}
 	}
-	hitted = 1;
+	hasHit = 1;
 	alarm[1] = 60
 }
 

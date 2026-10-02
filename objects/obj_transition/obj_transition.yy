@@ -11,8 +11,8 @@
   "name":"obj_transition",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"CHAOSTALES",
+    "path":"CHAOSTALES.yyp",
   },
   "parentObjectId":null,
   "persistent":false,

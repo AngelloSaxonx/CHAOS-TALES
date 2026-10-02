@@ -4,13 +4,14 @@
 #region
 
 var offsetY = 0;
-if instance_place(x,y+1,obj_collision)
+if instance_place(x,y+1,obj_collision) 
 {offsetY = 1;}
 
 var offsetTargetY = 0;
 if instance_place(targetX,targetY+2,obj_collision)
 {offsetTargetY = 2;}
 
+//this might cause performance issues 
 for (var i = 0; i < room_height; ++i) {
 	ground_y = round((bbox_bottom+i)/20)*20
 	if (collision_line(bbox_left,ground_y,bbox_right,ground_y,obj_collision,0,0))
@@ -19,11 +20,12 @@ for (var i = 0; i < room_height; ++i) {
 	}
 }
 
+//this will only work if every enemy is this size o_o' 
 for (var j = 0; j < room_height; ++j) {
 	var xx = xspd*20
 	var xx2 = xspd*30
 	
-	ground_y1 = round((bbox_bottom+j)/20)*20
+	ground_y1 = round((bbox_bottom+j)/20)*20 //why divide and times by 20? 
 	
 	var detect_coll = collision_line(x+(xspd*20),ground_y1-10,x+(xspd*30),ground_y1-10,obj_collision,0,0)
 	if (detect_coll != noone) && (detect_coll.bbox_top < bbox_bottom+2)
@@ -33,7 +35,7 @@ for (var j = 0; j < room_height; ++j) {
 	}
 	
 	if (collision_line(x+xx,ground_y1,x+xx2,ground_y1,obj_collision,0,0))
-	|| (collision_line(x+xx,ground_y1,x+xx2,ground_y1,obj_void,0,0))
+	or (collision_line(x+xx,ground_y1,x+xx2,ground_y1,obj_void,0,0))
 	{
 		break;
 	}
@@ -47,6 +49,7 @@ for (var k = 0; k <= jump_rangeY; ++k) {
 	}
 }
 
+//this could be a clamp 
 for (var l = 0; l <= jump_rangeY; ++l) {
 	jump_range_detectY = l
 	if (collision_rectangle(0,ground_y-jump_range_detectY,room_width,ground_y-1,obj_collision,true,0))
@@ -55,8 +58,30 @@ for (var l = 0; l <= jump_rangeY; ++l) {
 	}
 }
 
-var list2 = ds_list_create()
-var colly = noone
+#region Dash Code 
+//nothing is really labeled before so i assume this char clamps to floor elsewhere?
+//Nako is able to dash at an angle currently but at half the vertical speed  
+if dashTime > 0 {
+dashTime-- //deduct one from counter 
+xspd = lengthdir_x(dashSpd,dashDir)
+yspd = lengthdir_y(dashSpd/2,dashDir)
+}	
+if (dashTime <= 0) and !attacking and collision_circle(x,y,92,target, true, true) {
+dashTime = dashTimeReset //reset the Dash if we're not attacking 
+dashDir = point_direction(x,y,targetX,targetY) 
+if yspd < 0 {//if it's not negative 
+sprite_index = spr_nako_dash_swing_2 //swing down 
+}	
+else if yspd > 0 {
+sprite_index = spr_nako_dash_swing_4 //swing up 
+}
+}
+
+
+#endregion Dash 
+
+var list2 = ds_list_create() //no clean up event? 
+var colly = noone //likely stands for collision_y 
 var disting = 999999
 
 var coll2 = collision_rectangle_list(0,ground_y-(jump_range_detectY+1),room_width,ground_y-1,obj_collision,true,0,list2,false)
@@ -75,7 +100,7 @@ if (coll2 > 0)
 	}
 }
 
-if (ground_y-jump_rangeY > target.bbox_bottom)
+if (ground_y - jump_rangeY > target.bbox_bottom)
 {
 	if (colly)
 	{
@@ -201,7 +226,7 @@ else
 	}
 	
 	if !collision_rectangle(bbox_left,bbox_bottom,bbox_right,bbox_bottom+2+yspd,obj_collision,false,true)
-	{should_jump = 0}
+	{should_jump = 0} //disables the jump
 }
 
 
@@ -219,34 +244,41 @@ y += yspd
 
 #endregion
 
-if collision_circle(x,y,40,target,false,true) && (from =  noone) && (cooldown == 0)
+//auto-attack if the Player is within a 40 px circle *originating from nako's feet, fixed by request 
+if collision_circle(x,y,40,target,false,true) && (from = noone) && (cooldown <= 0)
 {
-	attack = true
+	attacking = true
 }
 
 var AtkX = x+(image_xscale*20)
 var AtkY = bbox_bottom-10
 	
-if (attack = true) && (from == noone)
+if (attacking= true) && (from == noone)
 {
-	var atk = instance_create_depth(AtkX,AtkY,depth,Obj_hitbox_nako_slash)
-	atk.image_xscale = image_xscale
-	from = atk.id
-	cooldown = 60;
+	//var nakoSlash = 
+	with (instance_create_depth(AtkX,AtkY,depth,obj_nako_slash_hitbox)) 
+	{ //create a Struct that modifies the attackHitbox's variables, or default parameters 
+	image_xscale = other.image_xscale //a more efficient way of doing this; copy it from the creator
+	//mirrors the Slash attackingto face Nako's direction 
+	}	
+	//nakoSlash.image_xscale = image_xscale
+	from = atk.id //had to change due to redundant variable name (used differently in scripts) 
+	cooldown = 82; //nerfed from 60 frames 
 }
-	
+//interesting method of removing the attack, or, actually detecting if one is not in progress 	
 if (from != noone) {
 	if instance_exists(from) {from.x = AtkX+xspd; from.y = AtkY+yspd; from.image_xscale = image_xscale}
 	else {from = noone}
-	attack = false
+	attacking= false
 }
 else
 {
-	if (cooldown > 0)
-	{cooldown--;}
-	else{cooldown = 0}
+	if (cooldown > 0) //if whatever this is has cooldown remaining  
+	{cooldown--;} //decrements the cooldown 
+	else{cooldown = 0} //a curious way of keeping the minimum to 0; but it works 
 }
 
+#region Nako's Sprites 
 
 if (xspd != 0)
 {
@@ -256,7 +288,7 @@ if (xspd != 0)
 		if sprite_index != spr_nako_jump
 		{image_index = 0}
 		sprite_index = spr_nako_jump
-		if (image_index > image_number - 1)
+		if (image_index > image_number - 1) //curious way to just remove 1 frame until it finishes 
 		{image_index = image_number - 1;}
 	}
 	else

@@ -25,7 +25,7 @@
   ],
   "name":"spr_nako_bomb_throw_1",
   "nineSlice":null,
-  "origin":7,
+  "origin":4,
   "parent":{
     "name":"bomb_throw",
     "path":"folders/Sprites/Characters/Scarlet Fields/Enemies/Nako/Movement/Attacks/bomb_throw.yy",
@@ -86,7 +86,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":14,
-    "yorigin":40,
+    "yorigin":20,
   },
   "swatchColours":null,
   "swfPrecision":0.5,
