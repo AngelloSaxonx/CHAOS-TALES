@@ -47,7 +47,7 @@ cooldown = 60; //oh woah this is initialized at 0? so it can attackingimmediatel
 #region Dash Variables - ask @Resonance22
 dashDir = point_direction(x,y,targetX,targetY) //default dash direction
 dashTime = 0 //in frames; start it by setting dashTime > 0 
-dashDistance = 64 //distance traveled 
+dashLength = 64 //distance traveled 
 dashTimeReset = 18 //the typical duration it takes to travel X distance 
 dashSpd = dashLength/dashTimeReset //how quickly it dashes depends on the duration  
 #endregion Dash 
