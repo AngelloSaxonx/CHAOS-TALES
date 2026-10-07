@@ -44,7 +44,7 @@
     ],
     "top":0,
   },
-  "origin":4,
+  "origin":7,
   "parent":{
     "name":"Movement",
     "path":"folders/Sprites/Characters/Scarlet Fields/Enemies/Nako/Movement.yy",
@@ -105,7 +105,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":14,
-    "yorigin":20,
+    "yorigin":40,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

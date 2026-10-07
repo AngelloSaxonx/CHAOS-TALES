@@ -1,6 +1,8 @@
 ///@description What does this do? 
 //*insert behavior description here* 
 
+jumping = false;
+
 path = path_add() //what's the path for? 
 image_moving = 0; //does not need be a variable; why is this not image_speed? 
 attack_spr[0] = spr_nako_swing_final

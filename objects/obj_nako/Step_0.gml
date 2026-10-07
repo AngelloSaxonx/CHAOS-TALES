@@ -1,7 +1,16 @@
 //step
 
+if collision_circle(x,y,92,target, true, true)
+{jumping = true}
+else
+{jumping = false}
+
 //  Pathing & Finding & Movement //
-#region
+if (jumping != true)
+{
+	///// under maintenance /////
+	
+	#region
 
 var offsetY = 0;
 if instance_place(x,y+1,obj_collision) 
@@ -57,28 +66,6 @@ for (var l = 0; l <= jump_rangeY; ++l) {
 		break;
 	}
 }
-
-#region Dash Code 
-//nothing is really labeled before so i assume this char clamps to floor elsewhere?
-//Nako is able to dash at an angle currently but at half the vertical speed  
-if dashTime > 0 {
-dashTime-- //deduct one from counter 
-xspd = lengthdir_x(dashSpd,dashDir)
-yspd = lengthdir_y(dashSpd/2,dashDir)
-}	
-if (dashTime <= 0) and !attacking and collision_circle(x,y,92,target, true, true) {
-dashTime = dashTimeReset //reset the Dash if we're not attacking 
-dashDir = point_direction(x,y,targetX,targetY) 
-if yspd < 0 {//if it's not negative 
-sprite_index = spr_nako_dash_swing_2 //swing down 
-}	
-else if yspd > 0 {
-sprite_index = spr_nako_dash_swing_4 //swing up 
-}
-}
-
-
-#endregion Dash 
 
 var list2 = ds_list_create() //no clean up event? 
 var colly = noone //likely stands for collision_y 
@@ -243,6 +230,73 @@ x += (xspd*max_spd)
 y += yspd
 
 #endregion
+	
+	///// it was the old one still but i'mm doing new one in other project.
+}
+
+else
+{
+	
+	
+#region Dash Code 
+//nothing is really labeled before so i assume this char clamps to floor elsewhere?
+//Nako is able to dash at an angle currently but at half the vertical speed  
+if dashTime > 0 {
+dashTime-- //deduct one from counter 
+xspd = lengthdir_x(dashSpd,dashDir)
+yspd = lengthdir_y(dashSpd/2,dashDir)
+}	
+if (dashTime <= 0) and !attacking and collision_circle(x,y,92,target, true, true) {
+dashTime = dashTimeReset //reset the Dash if we're not attacking 
+dashDir = point_direction(x,y,targetX,targetY) 
+if yspd < 0 {//if it's not negative 
+sprite_index = spr_nako_dash_swing_2 //swing down 
+}	
+else if yspd > 0 {
+sprite_index = spr_nako_dash_swing_4 //swing up 
+}
+}
+
+
+#endregion Dash 
+
+if instance_place(x+(xspd),y-(1-should_jump),obj_collision)
+{
+	xspd = 0;
+	x = round(x/2)*2;
+}
+
+if instance_place(x,y+yspd,obj_collision)
+{
+	yspd = 0;
+	if collision_rectangle(bbox_left,bbox_bottom,bbox_right,bbox_bottom+21+yspd,obj_collision,false,true)
+	{should_jump = 1}
+	else
+	{
+		if collision_rectangle(bbox_left,bbox_top-1+yspd,bbox_right,bbox_top,obj_collision,false,true)
+		{y = ceil(y/4)*4}
+		else{y = round(y/2)*2}
+	}
+}
+else
+{
+	var ground_landed = 0;
+	
+	if !instance_place(x,y+1+(yspd/2),obj_collision)
+	{
+	if (yspd < term_vel)
+	{yspd += grav}else
+	{yspd = term_vel}
+	}
+	
+	if !collision_rectangle(bbox_left,bbox_bottom,bbox_right,bbox_bottom+2+yspd,obj_collision,false,true)
+	{should_jump = 0} //disables the jump
+}
+
+x += xspd
+y += yspd
+}
+
 
 //auto-attack if the Player is within a 40 px circle *originating from nako's feet, fixed by request 
 if collision_circle(x,y,40,target,false,true) && (from = noone) && (cooldown <= 0)
