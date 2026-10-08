@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_void",
+  "%Name":"Obj_Order_jump",
   "eventList":[],
   "managed":true,
-  "name":"obj_void",
+  "name":"Obj_Order_jump",
   "overriddenProperties":[],
   "parent":{
     "name":"System",
@@ -32,5 +32,5 @@
     "path":"sprites/spr_path_blocker/spr_path_blocker.yy",
   },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }

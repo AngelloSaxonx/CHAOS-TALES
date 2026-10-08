@@ -1,7 +1,7 @@
 {
   "$GMSprite":"v2",
   "%Name":"spr_nako_walk",
-  "bboxMode":2,
+  "bboxMode":0,
   "bbox_bottom":39,
   "bbox_left":3,
   "bbox_right":24,
@@ -26,7 +26,7 @@
   ],
   "name":"spr_nako_walk",
   "nineSlice":null,
-  "origin":7,
+  "origin":4,
   "parent":{
     "name":"Movement",
     "path":"folders/Sprites/Characters/Scarlet Fields/Enemies/Nako/Movement.yy",
@@ -90,7 +90,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":14,
-    "yorigin":40,
+    "yorigin":20,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

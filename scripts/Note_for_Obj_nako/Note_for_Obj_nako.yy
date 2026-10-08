@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Note_for_Obj_nako",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Note_for_Obj_nako",
+  "parent":{
+    "name":"CHAOSTALES",
+    "path":"CHAOSTALES.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

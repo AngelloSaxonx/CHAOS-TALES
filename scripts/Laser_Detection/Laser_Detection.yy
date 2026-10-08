@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Laser_Detection",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Laser_Detection",
+  "parent":{
+    "name":"Enemy_Script",
+    "path":"folders/Scripts/Enemy_Script.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
