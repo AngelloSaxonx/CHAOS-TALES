@@ -26,7 +26,7 @@
   ],
   "name":"spr_flower_stab_dagger",
   "nineSlice":null,
-  "origin":7,
+  "origin":4,
   "parent":{
     "name":"flower_stab",
     "path":"folders/Sprites/Characters/Party/Flower/Movement/flower_stab.yy",
@@ -90,7 +90,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":20,
-    "yorigin":40,
+    "yorigin":20,
   },
   "swatchColours":null,
   "swfPrecision":0.5,
