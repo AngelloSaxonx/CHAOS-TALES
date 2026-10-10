@@ -28,7 +28,7 @@
   ],
   "name":"spr_nako_jump",
   "nineSlice":null,
-  "origin":7,
+  "origin":4,
   "parent":{
     "name":"Movement",
     "path":"folders/Sprites/Characters/Scarlet Fields/Enemies/Nako/Movement.yy",
@@ -98,7 +98,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":14,
-    "yorigin":40,
+    "yorigin":20,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

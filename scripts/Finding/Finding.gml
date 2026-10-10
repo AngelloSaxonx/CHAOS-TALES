@@ -24,16 +24,45 @@ function Finding(){
 			}
 		}
 		ds_list_destroy(_list);// and no, it doesn't hurt as long as this code exist
-	
-	
+		
+		// same things but
+		var _list5 = ds_list_create();
+		var coll5 = noone
+		var dist5 = 99999
+		var _num5 = collision_rectangle_list(bbox_left,(ground_y-1)-jump_range_limit,bbox_right,bbox_bottom-1, obj_collision,true,true, _list5, false);
+		//^^^ checking the floor above him
+		if (_num5 > 0)
+		{
+			for (var i = 0; i < _num5; ++i)
+			{
+			    var close_obj = _list5[| i];
+				var close_dist = point_distance(x,y,clamp(x,close_obj.bbox_left,close_obj.bbox_right),close_obj.y+10)
+				if (close_dist < dist5)
+				{
+				dist5 = close_dist
+				coll5 = close_obj
+				}
+			}
+		}
+		ds_list_destroy(_list5);
+		
 		if (coll != noone)//if it found nearest inst
 		{
-			if (collision_rectangle(bbox_left,bbox_bottom,bbox_right,bbox_bottom+1,Obj_wall,true,true))// if on floor
-			if (!collision_rectangle(clamp(x,coll.bbox_left,coll.bbox_right)-32,coll.bbox_top-(sprite_height+jump_spd),clamp(x,coll.bbox_left,coll.bbox_right)+32,coll.bbox_top-1,Obj_wall,true,true))
-			//^^^ when he jump, he sometimes hit with the roof, and the gap getting was so small. so i add this so he can think about fitting in
+			if (collision_rectangle(bbox_left,bbox_bottom,bbox_right,bbox_bottom+1,obj_collision,true,true))// if on floor
 			{
-				TargetX = clamp(x,coll.bbox_left,coll.bbox_right) // as long as on top of coll
-				TargetY = coll.y-32 // on top of coll
+				if ((coll5 == noone) //if there's not a roof above him
+				|| (coll5 != noone && //if there's a roof above him and try to jump
+				!collision_rectangle(clamp(x,coll.bbox_left,coll.bbox_right)-32,coll.bbox_top-(sprite_height+jump_spd),clamp(x,coll.bbox_left,coll.bbox_right)+32,coll.bbox_top-1,coll5,true,true)))
+				//^^^ when he jump, he sometimes hit with the roof, and the gap getting was so small. so i add this so he can think about fitting in
+				{
+					TargetX = clamp(x,coll.bbox_left,coll.bbox_right) // as long as on top of coll
+					TargetY = coll.y-32 // on top of coll
+				}
+				else
+				{
+					TargetX = Target.x // just target position
+					TargetY = Target.y
+				}
 			}
 		}
 		else

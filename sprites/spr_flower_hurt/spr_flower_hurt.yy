@@ -23,7 +23,7 @@
   ],
   "name":"spr_flower_hurt",
   "nineSlice":null,
-  "origin":7,
+  "origin":4,
   "parent":{
     "name":"Movement",
     "path":"folders/Sprites/Characters/Party/Flower/Movement.yy",
@@ -78,7 +78,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":12,
-    "yorigin":40,
+    "yorigin":20,
   },
   "swatchColours":null,
   "swfPrecision":0.5,
