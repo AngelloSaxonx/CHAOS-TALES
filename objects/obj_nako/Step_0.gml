@@ -2,16 +2,17 @@
 #region
 if (stop_chase == 0)
 {
+//Detecting Player
+Detect_Range()
 
+//Detecting Wall
 Laser_Detection()
 
 /// Pathing ///
-
 Pathing()
 
 /// Findinng ///
-
-Finding()
+Finding();
 
 /// Jump ///
 if (should_jump = true) 

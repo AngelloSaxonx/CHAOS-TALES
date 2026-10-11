@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Detect_Range",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Detect_Range",
+  "parent":{
+    "name":"Enemy_Script",
+    "path":"folders/Scripts/Enemy_Script.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

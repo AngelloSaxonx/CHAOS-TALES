@@ -52,23 +52,23 @@ function Finding(){
 			{
 				if ((coll5 == noone) //if there's not a roof above him
 				|| (coll5 != noone && //if there's a roof above him and try to jump
-				!collision_rectangle(clamp(x,coll.bbox_left,coll.bbox_right)-32,coll.bbox_top-(sprite_height+jump_spd),clamp(x,coll.bbox_left,coll.bbox_right)+32,coll.bbox_top-1,coll5,true,true)))
+				!collision_rectangle(clamp(x,coll.bbox_left,coll.bbox_right)-10,coll.bbox_top-(sprite_height+jump_spd),clamp(x,coll.bbox_left,coll.bbox_right)+10,coll.bbox_top-1,coll5,true,true)))
 				//^^^ when he jump, he sometimes hit with the roof, and the gap getting was so small. so i add this so he can think about fitting in
 				{
 					TargetX = clamp(x,coll.bbox_left,coll.bbox_right) // as long as on top of coll
-					TargetY = coll.y-32 // on top of coll
+					TargetY = coll.y-10 // on top of coll
 				}
 				else
 				{
-					TargetX = Target.x // just target position
-					TargetY = Target.y
+					TargetX = Target.x+TargetX_offset // just target position
+					TargetY = Target.y+TargetY_offset
 				}
 			}
 		}
 		else
 		{
-			TargetX = Target.x // just target position
-			TargetY = Target.y
+			TargetX = Target.x+TargetX_offset // just target position
+			TargetY = Target.y+TargetY_offset
 		}
 	}
 	else
@@ -147,13 +147,13 @@ function Finding(){
 			if (coll3.bbox_left == land_coll.bbox_left)
 			{
 				TargetX = coll3.bbox_right
-				TargetY = coll3.y-32
+				TargetY = coll3.y-10
 			}
 			//vise vresa
 			if (coll3.bbox_right == land_coll.bbox_right)
 			{
 				TargetX = coll3.bbox_left
-				TargetY = coll3.y-32
+				TargetY = coll3.y-10
 			}
 		}
 		else if (coll4 != noone) && (collision_rectangle(coll4.bbox_left,coll4.bbox_top-1,coll4.bbox_right,coll4.bbox_top,Target,true,true))
@@ -162,14 +162,14 @@ function Finding(){
 			//if the floor below him and the floor he stand has the same cutoff of the side, go to the opposite side of the floor he stand
 			if (coll4.bbox_left == land_coll.bbox_left)
 			{
-				TargetX = land_coll.bbox_right+32
+				TargetX = land_coll.bbox_right+10
 			}
 			//vise vresa
 			if (coll4.bbox_right == land_coll.bbox_right)
 			{
-				TargetX = land_coll.bbox_left+32
+				TargetX = land_coll.bbox_left+10
 			}
-			TargetY = land_coll.y-32
+			TargetY = land_coll.y-10
 		}
 		else if (coll2 != noone)
 		//the front's nearest floor detected
@@ -177,20 +177,20 @@ function Finding(){
 			if (Target.y > ground_y) // if the target was down there
 			{
 				TargetX = clamp(Target.x,coll2.bbox_left,coll2.bbox_right) // he choose a side of the front's nearest floor
-				TargetY = coll2.y-32
+				TargetY = coll2.y-10
 			}
 			else
 			{
 				if collision_rectangle(bbox_left,bbox_bottom,bbox_right,bbox_bottom+1+yspd,obj_collision,true,true)
 				// only if he touch ground
-				{TargetX = Target.x// just target position
-				TargetY = Target.y}
+				{TargetX = Target.x+TargetX_offset// just target position
+				TargetY = Target.y+TargetY_offset}
 			}
 		}
 		else
 		{
-			TargetX = Target.x// just target position
-			TargetY = Target.y
+			TargetX = Target.x+TargetX_offset// just target position
+			TargetY = Target.y+TargetY_offset
 		}
 	}
 

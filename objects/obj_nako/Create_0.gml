@@ -1,9 +1,15 @@
 #region
+randomise()
 path = path_add();
 
-Target = obj_flower
+RealTarget = obj_flower
+Target = RealTarget
 TargetX = Target.x
 TargetY = Target.y
+TargetX_offset = 0;
+TargetY_offset = 0;
+Detect_Timer = 0
+Choose_Timer = 0;
 
 spd = 1
 max_spd = spd
