@@ -13,7 +13,7 @@ option[1,0] = "Sound";
 option[1,1] = "Music";
 option[1,2] = "Back";
 
-option[2,0] = "Concepts";
+option[2,0] = "Background";
 option[2,1] = "Chapters";
 option[2,2] = "Achievements";
 option[2,3] = "Back";
