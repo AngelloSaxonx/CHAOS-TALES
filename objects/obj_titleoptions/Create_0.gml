@@ -13,6 +13,11 @@ option[1,0] = "Sound";
 option[1,1] = "Music";
 option[1,2] = "Back";
 
+option[2,0] = "Concepts";
+option[2,1] = "Chapters";
+option[2,2] = "Achievements";
+option[2,3] = "Back";
+
 menu_lenght = 0;
 option_lenght = array_length(option[menu_lenght]);
 

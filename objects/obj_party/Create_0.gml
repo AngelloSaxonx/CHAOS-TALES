@@ -1,4 +1,5 @@
 //create
+depth = -600
 object = obj_flower;
 lv = 1;
 xp = 0;

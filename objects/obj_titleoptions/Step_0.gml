@@ -20,7 +20,12 @@ if accept_key
 		
 			case(1):
 			menu_lenght = 1
-		
+			pos = 0;
+			break;
+			
+			case(2):
+			menu_lenght = 2
+			pos = 0;
 			break;
 		
 			case(3):
@@ -43,6 +48,30 @@ if accept_key
 		
 			case(2):
 			menu_lenght = 0
+			pos = 0;
+			break;
+		
+		}
+		break;
+		
+		case 2:
+		switch (pos)
+		{
+			case(0):
+		
+			break;
+		
+			case(1):
+		
+			break;
+		
+			case(2):
+			
+			break;
+			
+			case(3):
+			menu_lenght = 0
+			pos = 0;
 			break;
 		
 		}
