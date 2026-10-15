@@ -1,4 +1,6 @@
-if (keyboard_check_pressed(ord("F")))
+scr_get_control()
+
+if (menu_key) && (!instance_exists(obj_textbox))
 {
     if (!global.paused)
     {

@@ -1,5 +1,5 @@
 //draw
-if room != rm_titlescreen
+if (room != rm_titlescreen) && (global.paused != true)
 {
 	// code here
 	draw_text(Xoffset * space + 20, Yoffset*2, + string(hp) + "/" + string(hp_max))
