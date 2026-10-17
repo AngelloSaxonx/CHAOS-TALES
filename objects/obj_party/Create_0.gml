@@ -5,7 +5,7 @@ y = room_height/2
 Key_word()
 
 select_character = 0;
-char_list = [obj_flower,obj_nako]
+char_list = [obj_flower,obj_nako_party]
 char_icon = []
 hp = []
 hp_max = []
@@ -14,6 +14,8 @@ sp_max = []
 atk = [];
 def = [];
 magic  = [];
+stat4 = [];
+stat5 = [];
 
 char_stats = []
 
@@ -29,6 +31,8 @@ for (var i = 0; i < array_length(char_list); ++i) {
 			array_push(atk,4)
 			array_push(def,2)
 			array_push(magic,2)
+			array_push(stat4,0)
+			array_push(stat5,0)
 			
 			array_push(char_icon,"@flower@Flower")
 			array_push(char_stats,
@@ -38,7 +42,7 @@ for (var i = 0; i < array_length(char_list); ++i) {
 			)
 		}
 		break;
-		case obj_nako :
+		case obj_nako_party :
 		{
 			array_push(hp,20)
 			array_push(hp_max,20)
@@ -47,8 +51,10 @@ for (var i = 0; i < array_length(char_list); ++i) {
 			array_push(atk,2)
 			array_push(def,5)
 			array_push(magic,0)
+			array_push(stat4,0)
+			array_push(stat5,0)
 			
-			array_push(char_icon,"@nako@Nako")
+			array_push(char_icon,"@nako@Nakolyn")
 			array_push(char_stats,
 			"Atk: " + string(atk[i]) + "\n" +
 			"Def: " + string(def[i]) + "\n" +

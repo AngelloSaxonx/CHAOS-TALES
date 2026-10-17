@@ -22,35 +22,35 @@ if (global.paused == true)
 	}
 	
 	draw_sprite_ext(spr_textbox_classic,0,
-	x - 90,
+	x - 110,
 	y+boarderY - 45,
-	4.5,4.5,0,c_white,0.5
+	5,4.5,0,c_white,0.5
 	)
 	
 	draw_sprite_ext(spr_textbox_classic,0,
-	x - 90,
+	x - 110,
 	y+boarderY + 45,
-	4.5,4.5,0,c_white,0.5
+	5,4.5,0,c_white,0.5
 	)
 	
 	draw_sprite_ext(spr_textbox_classic,0,
 	x,
 	y+boarderY,
-	4.5,9,0,c_white,0.5
+	6,9,0,c_white,0.5
 	)
 	
 	draw_sprite_ext(spr_textbox_classic,0,
-	x + 90,
+	x + 110,
 	y+boarderY,
-	4.5,9,0,c_white,0.5
+	5,9,0,c_white,0.5
 	)
 	
 	for (var i = 0; i < array_length(char_list); ++i) {
 		var select_color = c_white
 		if (select_character = i)
 		{select_color = c_red}
-		scr_menu_type(x,y+(step*i),char_icon[i],char_icon_progress,0,select_color,select_color)
+		scr_menu_type(x - 25,y+(step*i),char_icon[i],char_icon_progress,0,select_color,select_color)
 	}
 	
-	scr_menu_type(x,y,char_stats[select_character],char_stats_progress,1,c_white,c_white)
+	scr_menu_type(x - 25,y,char_stats[select_character],char_stats_progress,1,c_white,c_white)
 }

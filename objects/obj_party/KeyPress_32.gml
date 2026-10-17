@@ -13,6 +13,8 @@ if (room != rm_titlescreen)
 				array_push(atk,4)
 				array_push(def,2)
 				array_push(magic,2)
+				array_push(stat4,0)
+				array_push(stat5,0)
 			
 				array_push(char_icon,"@flower@Flower")
 				array_push(char_stats,
@@ -22,7 +24,7 @@ if (room != rm_titlescreen)
 				)
 			}
 			break;
-			case obj_nako :
+			case obj_nako_party :
 			{
 				array_push(hp,20)
 				array_push(hp_max,20)
@@ -31,6 +33,8 @@ if (room != rm_titlescreen)
 				array_push(atk,2)
 				array_push(def,5)
 				array_push(magic,0)
+				array_push(stat4,0)
+				array_push(stat5,0)
 			
 				array_push(char_icon,"@nako@Nako")
 				array_push(char_stats,
