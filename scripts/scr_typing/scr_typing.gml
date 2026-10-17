@@ -176,6 +176,11 @@ function scr_menu_type( x, y, _text, _progress, _type, c_color1, c_color2)
 				move_x = -120;
 				move_y = -60;
 			}
+			else if (_type == 1)
+			{
+				move_x = -120;
+				move_y = 30;
+			}
 			var scale_x = 1;
 			var scale_y = 1;
 			var scale_alpha = 1;

@@ -184,6 +184,7 @@
     {"id":{"name":"scr_room_id","path":"scripts/scr_room_id/scr_room_id.yy",},},
     {"id":{"name":"scr_state","path":"scripts/scr_state/scr_state.yy",},},
     {"id":{"name":"scr_typing","path":"scripts/scr_typing/scr_typing.yy",},},
+    {"id":{"name":"ICON_CONFIG","path":"sprites/ICON_CONFIG/ICON_CONFIG.yy",},},
     {"id":{"name":"ICON_EQUIP","path":"sprites/ICON_EQUIP/ICON_EQUIP.yy",},},
     {"id":{"name":"ICON_ITEMS","path":"sprites/ICON_ITEMS/ICON_ITEMS.yy",},},
     {"id":{"name":"ICON_JOURNAL","path":"sprites/ICON_JOURNAL/ICON_JOURNAL.yy",},},
