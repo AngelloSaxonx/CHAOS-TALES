@@ -21,7 +21,7 @@ if (menu_key) && (!instance_exists(obj_textbox))
 
         global.paused = true;
         instance_deactivate_all(true);
-		instance_activate_object(obj_party)
+		instance_activate_object(obj_menu)
 		}
     }
     else

@@ -34,15 +34,15 @@ if (global.paused == true)
 	)
 	
 	draw_sprite_ext(spr_textbox_classic,0,
-	x,
+	x - 5,
 	y+boarderY,
-	6,9,0,c_white,0.5
+	5.5,9,0,c_white,0.5
 	)
 	
 	draw_sprite_ext(spr_textbox_classic,0,
-	x + 110,
+	x + 105,
 	y+boarderY,
-	5,9,0,c_white,0.5
+	5.5,9,0,c_white,0.5
 	)
 	
 	for (var i = 0; i < array_length(char_list); ++i) {
@@ -53,4 +53,6 @@ if (global.paused == true)
 	}
 	
 	scr_menu_type(x - 25,y,char_stats[select_character],char_stats_progress,1,c_white,c_white)
+	
+	scr_menu_type(x + 180,y-90,char_desc[select_character],char_desc_progress,1,c_white,c_white)
 }
