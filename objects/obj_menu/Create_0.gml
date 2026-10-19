@@ -1,8 +1,11 @@
 //create
+randomise()
 depth = -600
 x = room_width/2
 y = room_height/2
 Key_word()
+scroll_y = 0;
+surf = -1
 
 select_character = 0;
 char_list = [obj_flower,obj_nako_party]
@@ -47,7 +50,7 @@ for (var i = 0; i < array_length(char_list); ++i) {
 			)
 			array_push(char_desc,
 			"LV" + string(lv[i]) + " Flower" +
-			"\n" + string(desc[i])
+			"\n\n" + string(desc[i])
 			)
 		}
 		break;
@@ -73,7 +76,7 @@ for (var i = 0; i < array_length(char_list); ++i) {
 			)
 			array_push(char_desc,
 			"LV" + string(lv[i]) + " Nakolyn" + 
-			"\n" + string(desc[i])
+			"\n\n" + string(desc[i])
 			)
 		}
 		break;

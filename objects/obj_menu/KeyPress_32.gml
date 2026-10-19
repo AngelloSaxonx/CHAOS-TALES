@@ -1,6 +1,6 @@
 if (room != rm_titlescreen)
 {
-	array_push(char_list,obj_flower)
+	array_push(char_list,obj_flower/*choose(obj_flower,obj_nako_party)*/)
 	for (var i = array_length(char_list)-1; i < array_length(char_list); ++i) {
 		switch (char_list[i])
 		{
@@ -26,7 +26,7 @@ if (room != rm_titlescreen)
 				)
 				array_push(char_desc,
 				"LV" + string(lv[i]) + " Flower" +
-				"\n" + string(desc[i])
+				"\n\n" + string(desc[i])
 				)
 			}
 			break;
@@ -52,7 +52,7 @@ if (room != rm_titlescreen)
 				)
 				array_push(char_desc,
 				"LV" + string(lv[i]) + " Nakolyn" +
-				"\n" + string(desc[i])
+				"\n\n" + string(desc[i])
 				)
 			}
 			break;

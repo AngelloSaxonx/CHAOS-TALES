@@ -144,27 +144,37 @@ function scr_menu_type( x, y, _text, _progress, _type, c_color1, c_color2)
 			_draw_x = 0;
 			_draw_y += string_height("A");
 		}
-		/*else if (_char == " ")
+		else if (_char == " ")
 		{
-			_draw_x += string_width(_char);
-			
-			var _word_width = 0;
-			for (var _ii = _i + 1; _ii <= string_length(_text); _ii++)
+			if (_text == char_stats[select_character])
 			{
-				var _word_char = string_char_at(_text, _ii)
-				
-				if (_word_char == "\n" || _word_char == " ")
-				break;
-				
-				_word_width += string_width(_word_char);
-				if (_draw_x + _word_width > _width)
+				_draw_x += (string_width(_char));
+			}
+			else
+			{
+				_draw_x += (string_width(_char)/4);
+			}
+			
+			if (_text == char_desc[select_character])
+			{
+				var _word_width = 0;
+				for (var _ii = _i + 1; _ii <= string_length(_text); _ii++)
 				{
-					_draw_x = 0;
-					_draw_y += string_height("A");
+					var _word_char = string_char_at(_text, _ii)
+				
+					if (_word_char == "\n" || _word_char == " ")
 					break;
+				
+					_word_width += string_width(_word_char);
+					if (_draw_x + _word_width > 118)
+					{
+						_draw_x = 0;
+						_draw_y += string_height("A");
+						break;
+					}
 				}
 			}
-		}*/
+		}
 		else//page = current_action // draw_char = text_progress
 		{
 			/////Add effect
@@ -173,8 +183,8 @@ function scr_menu_type( x, y, _text, _progress, _type, c_color1, c_color2)
 			var move_y = 0;
 			if (_type == 0)
 			{
-				move_x = -120;
-				move_y = -60;
+				move_x = -123//-120;
+				move_y = -103;//-60;
 			}
 			else if (_type == 1)
 			{

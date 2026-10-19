@@ -10,6 +10,8 @@ if (room != rm_titlescreen) && (global.paused != true)
 
 if (global.paused == true)
 {
+	draw_text(x,y,select_character+scroll_y)
+	
 	var step = 22
 	
 	var boarderY = 10
@@ -34,25 +36,43 @@ if (global.paused == true)
 	)
 	
 	draw_sprite_ext(spr_textbox_classic,0,
-	x - 5,
+	x - 10,
 	y+boarderY,
-	5.5,9,0,c_white,0.5
+	5,9,0,c_white,0.5
 	)
 	
 	draw_sprite_ext(spr_textbox_classic,0,
-	x + 105,
+	x + 100,
 	y+boarderY,
-	5.5,9,0,c_white,0.5
+	6,9,0,c_white,0.5
 	)
 	
+	////Char_list
+	#region
+	//hide the icon and text when they're outside of boarder using surface
+	//create and setting
+	if (!surface_exists(surf)) {
+    surf = surface_create(94, 84);
+	}
+	surface_set_target(surf);
+	//setting the invis black cover outside of boarder so they're stay hidden
+	draw_clear_alpha(c_black,0)
+	//now draw icons and texts
 	for (var i = 0; i < array_length(char_list); ++i) {
 		var select_color = c_white
 		if (select_character = i)
 		{select_color = c_red}
-		scr_menu_type(x - 25,y+(step*i),char_icon[i],char_icon_progress,0,select_color,select_color)
+		
+		scr_menu_type(x - 25,y+(scroll_y*22)+(step*i),char_icon[i],char_icon_progress,0,select_color,select_color)
 	}
+	//Reset the surface back to the main application surface
+	surface_reset_target();
+	//then draw the invis cover
+	draw_surface(surf,x-157,y-77)
+	#endregion
 	
+	////Char_stats
 	scr_menu_type(x - 25,y,char_stats[select_character],char_stats_progress,1,c_white,c_white)
-	
-	scr_menu_type(x + 180,y-90,char_desc[select_character],char_desc_progress,1,c_white,c_white)
+	////Char_desc
+	scr_menu_type(x + 175,y-90,char_desc[select_character],char_desc_progress,1,c_white,c_white)
 }
