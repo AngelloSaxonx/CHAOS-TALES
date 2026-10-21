@@ -34,13 +34,8 @@ function scr_get_control()
 		
 	attack_key = keyboard_check_pressed(ord("X"))
 		attack_key = clamp( attack_key, 0, 1);
-	
-	dash_key = keyboard_check_pressed(ord("C")) + gamepad_button_check_pressed( 0, gp_shoulderlb);
-		dash_key = clamp( dash_key, 0, 1);
-	run_key = keyboard_check(ord("C")) + gamepad_button_check( 0, gp_shoulderlb);
-		run_key = clamp( run_key, 0, 1);
 		
-	menu_key = keyboard_check_pressed(ord("F")) + gamepad_button_check_pressed(	0, gp_face4);
+	menu_key = keyboard_check_pressed(ord("C")) + gamepad_button_check_pressed(	0, gp_face4);
 		menu_key = clamp( menu_key, 0, 1);
 		
 	accept_key = keyboard_check_pressed(ord("Z")) + gamepad_button_check_pressed( 0, gp_face1);

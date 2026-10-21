@@ -23,8 +23,7 @@ face = 1;
 
 run_type = 0;
 move_dir = 0;
-move_spd[0] = 2
-move_spd[1] = 3;
+move_spd = 2
 xspd = 0;
 yspd = 0;
 
@@ -74,14 +73,7 @@ scr_state_idle = function()
 
     if move_dir != 0 {face = move_dir};
 
-    run_type = run_key;
     
-	if (move_dir != 0){
-        xspd = move_dir * move_spd[run_type];
-    } else /* if (on_ground == true)*/{
-        xspd *= .98;
-       if (xspd < 0.05) or (xspd > 0.05) xspd = 0;
-    }
 	}
 
     //Attack
@@ -111,7 +103,7 @@ scr_state_idle = function()
 	}
     scr_movement();
 	
-	var coll = instance_place(x+(move_dir*move_spd[0]),y,obj_collision)
+	var coll = instance_place(x+(move_dir*move_spd),y,obj_collision)
 	if ( (coll && (coll.bbox_top > bbox_top+1)))
 	&& !(instance_place(x,y+1,obj_collision))
 	{
@@ -146,57 +138,29 @@ scr_state_idle = function()
 				sprite_index = idle_spr
 			}
 		}
-		//Run & Dash
-		else if abs(xspd) >= move_spd[1] 
-		{
-			if sprite_index != run_spr{
-			//Dash
-			if !on_ground
-			{
-			if sprite_index != dash_air_spr
-		    {image_index = 0}
-			sprite_index = dash_air_spr;
-			}
-			//Run
-			else{
-			if sprite_index != run_spr
-		    {image_index = 0}
-			sprite_index = run_spr;
-			}
-			}
-		}
 		//Walk
-		else 
-		{
+		
 			if sprite_index != walk_spr
 		    {image_index = 0}
 			sprite_index = walk_spr
-		};
 	}
 	//Jump
 	else
 	{    
 	//Airdash
-		image_speed = 1
-		if abs(xspd) >= move_spd[1] 
-		    {if sprite_index != dash_air_spr 
-		        {image_index = 0}
-		    sprite_index = dash_air_spr;
-			}
+		
 		//Jump
-		else if sprite_index != dash_air_spr 
+			if sprite_index != jump_spr
 		    {
-				if sprite_index != jump_spr
-		        {
-					if (jump_key) {image_index = 0} // if you press jump
-					else {image_index = 2} // Otherwise act like falling
-				}
-				else
-				{
-					if (jump_key_pressed && can_jump) {image_index = 0} //Double jumping refresh animation
-				}
-				sprite_index = jump_spr
+				if (jump_key) {image_index = 0} // if you press jump
+				else {image_index = 2} // Otherwise act like falling
 			}
+			else
+			{
+				if (jump_key_pressed && can_jump) {image_index = 0} //Double jumping refresh animation
+			}
+			sprite_index = jump_spr
+		
 	}
 	}
 };
@@ -219,7 +183,7 @@ scr_wall_recovery = function()
 			{
 				image_index = 2
 			}
-			xspd = (face*move_spd[0])
+			xspd = (face*move_spd)
 		}
 		//staring backward
 		else if (!place_meeting(x,y+1,obj_collision)) && (yspd >= 0){
@@ -240,7 +204,7 @@ scr_wall_recovery = function()
 				{
 					image_index = 2
 				}
-				xspd = (face*move_spd[0])
+				xspd = (face*move_spd)
 			}
 		}
 		//if land in time, landing animation
