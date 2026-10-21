@@ -24,6 +24,7 @@ stat5 = [];
 desc = [];
 
 char_stats = []
+char_2_stats = []
 
 for (var i = 0; i < array_length(char_list); ++i) {
 	switch (char_list[i])
@@ -47,6 +48,11 @@ for (var i = 0; i < array_length(char_list); ++i) {
 			"Atk: " + string(atk[i]) + "\n" +
 			"Def: " + string(def[i]) + "\n" +
 			"Mag: " + string(magic[i])
+			)
+			array_push(char_2_stats,
+			"Hp: " + string(hp[i]) + "/" + string(hp_max[i]) + "\n" +
+			"Sp: " + string(sp[i]) + "/" + string(sp_max[i]) + "\n" +
+			"Lvl: " + string(lv[i])
 			)
 			array_push(char_desc,
 			"LV" + string(lv[i]) + " Flower" +
@@ -74,6 +80,11 @@ for (var i = 0; i < array_length(char_list); ++i) {
 			"Def: " + string(def[i]) + "\n" +
 			"Mag: " + string(magic[i])
 			)
+			array_push(char_2_stats,
+			"Hp: " + string(hp[i]) + "/" + string(hp_max[i]) + "\n" +
+			"Sp: " + string(sp[i]) + "/" + string(sp_max[i]) + "\n" +
+			"Lvl: " + string(lv[i])
+			)
 			array_push(char_desc,
 			"LV" + string(lv[i]) + " Nakolyn" + 
 			"\n\n" + string(desc[i])
@@ -82,9 +93,6 @@ for (var i = 0; i < array_length(char_list); ++i) {
 		break;
 	}
 }
-char_icon_progress = string_length(char_icon)
-char_stats_progress = string_length(char_stats)
-char_desc_progress = string_length(char_desc)
 
 /*
 //object = obj_flower;

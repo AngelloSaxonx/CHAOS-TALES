@@ -63,7 +63,7 @@ if (global.paused == true)
 		if (select_character = i)
 		{select_color = c_red}
 		
-		scr_menu_type(x - 25,y+(scroll_y*22)+(step*i),char_icon[i],char_icon_progress,0,select_color,select_color)
+		scr_menu_type(x,y+(scroll_y*22)+(step*i),char_icon[i],string_length(char_icon),0,select_color,select_color)
 	}
 	//Reset the surface back to the main application surface
 	surface_reset_target();
@@ -72,7 +72,9 @@ if (global.paused == true)
 	#endregion
 	
 	////Char_stats
-	scr_menu_type(x - 25,y,char_stats[select_character],char_stats_progress,1,c_white,c_white)
+	scr_menu_type(x,y,char_stats[select_character],string_length(char_stats),1,c_white,c_white)
+	////Char_2_stats
+	scr_menu_type(x,y,char_2_stats[select_character],string_length(char_2_stats),2,c_white,c_white)
 	////Char_desc
-	scr_menu_type(x + 175,y-90,char_desc[select_character],char_desc_progress,1,c_white,c_white)
+	scr_menu_type(x,y,char_desc[select_character],string_length(char_desc),3,c_white,c_white)
 }

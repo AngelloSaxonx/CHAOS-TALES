@@ -183,14 +183,25 @@ function scr_menu_type( x, y, _text, _progress, _type, c_color1, c_color2)
 			var move_y = 0;
 			if (_type == 0)
 			{
-				move_x = -123//-120;
-				move_y = -103;//-60;
+				move_x = -148//-120;
+				move_y = -103;//-60; 
 			}
 			else if (_type == 1)
 			{
-				move_x = -120;
+				move_x = -145;
 				move_y = 30;
 			}
+			else if (_type == 2)
+			{
+				move_x = -45;
+				move_y = -60;
+			}
+			else if (_type == 3)
+			{
+				move_x = 55;
+				move_y = -60;
+			}
+			
 			var scale_x = 1;
 			var scale_y = 1;
 			var scale_alpha = 1;
