@@ -7,6 +7,8 @@ if (room != rm_titlescreen)
 			case obj_flower :
 			{
 				array_push(lv,1)
+				array_push(xp,0)
+				array_push(xp_max,100)
 				array_push(hp,10)
 				array_push(hp_max,10)
 				array_push(sp,5)
@@ -25,9 +27,10 @@ if (room != rm_titlescreen)
 				"Mag: " + string(magic[i])
 				)
 				array_push(char_2_stats,
+				"Lv: " + string(lv[i]) + "\n" +
+				"Xp:" + string(xp[i]) + "\n" +
 				"Hp: " + string(hp[i]) + "/" + string(hp_max[i]) + "\n" +
-				"Sp: " + string(sp[i]) + "/" + string(sp_max[i]) + "\n" +
-				"Lvl: " + string(lv[i])
+				"Sp: " + string(sp[i]) + "/" + string(sp_max[i]) + "\n"
 				)
 				array_push(char_desc,
 				"LV" + string(lv[i]) + " Flower" +
@@ -38,6 +41,8 @@ if (room != rm_titlescreen)
 			case obj_nako_party :
 			{
 				array_push(lv,1)
+				array_push(xp,0)
+				array_push(xp_max,100)
 				array_push(hp,20)
 				array_push(hp_max,20)
 				array_push(sp,0)
@@ -56,12 +61,13 @@ if (room != rm_titlescreen)
 				"Mag: " + string(magic[i])
 				)
 				array_push(char_2_stats,
+				"Lv: " + string(lv[i]) + "\n" +
+				"Xp:" + string(xp[i]) + "\n" +
 				"Hp: " + string(hp[i]) + "/" + string(hp_max[i]) + "\n" +
-				"Sp: " + string(sp[i]) + "/" + string(sp_max[i]) + "\n" +
-				"Lvl: " + string(lv[i])
+				"Sp: " + string(sp[i]) + "/" + string(sp_max[i]) + "\n"
 				)
 				array_push(char_desc,
-				"LV" + string(lv[i]) + " Nakolyn" +
+				"LV" + string(lv[i]) + " Nakolyn" + 
 				"\n\n" + string(desc[i])
 				)
 			}

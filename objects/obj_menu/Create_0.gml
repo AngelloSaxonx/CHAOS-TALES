@@ -11,7 +11,13 @@ select_character = 0;
 char_list = [obj_flower,obj_nako_party]
 char_icon = []
 char_desc = []
+
+ringp = []
+ringp_max = []
+
 lv = []
+xp = []
+xp_max = []
 hp = []
 hp_max = []
 sp = []
@@ -26,12 +32,17 @@ desc = [];
 char_stats = []
 char_2_stats = []
 
+array_push(ringp,0)
+array_push(ringp_max,0)
+
 for (var i = 0; i < array_length(char_list); ++i) {
 	switch (char_list[i])
 	{
 		case obj_flower :
 		{
 			array_push(lv,1)
+			array_push(xp,0)
+			array_push(xp_max,100)
 			array_push(hp,10)
 			array_push(hp_max,10)
 			array_push(sp,5)
@@ -50,9 +61,10 @@ for (var i = 0; i < array_length(char_list); ++i) {
 			"Mag: " + string(magic[i])
 			)
 			array_push(char_2_stats,
+			"Lv: " + string(lv[i]) + "\n" +
+			"Xp:" + string(xp[i]) + "\n" +
 			"Hp: " + string(hp[i]) + "/" + string(hp_max[i]) + "\n" +
-			"Sp: " + string(sp[i]) + "/" + string(sp_max[i]) + "\n" +
-			"Lvl: " + string(lv[i])
+			"Sp: " + string(sp[i]) + "/" + string(sp_max[i]) + "\n"
 			)
 			array_push(char_desc,
 			"LV" + string(lv[i]) + " Flower" +
@@ -63,9 +75,11 @@ for (var i = 0; i < array_length(char_list); ++i) {
 		case obj_nako_party :
 		{
 			array_push(lv,1)
+			array_push(xp,0)
+			array_push(xp_max,100)
 			array_push(hp,20)
 			array_push(hp_max,20)
-			array_push(sp,0)
+			array_push(sp,5)
 			array_push(sp_max,5)
 			array_push(atk,2)
 			array_push(def,5)
@@ -81,9 +95,10 @@ for (var i = 0; i < array_length(char_list); ++i) {
 			"Mag: " + string(magic[i])
 			)
 			array_push(char_2_stats,
+			"Lv: " + string(lv[i]) + "\n" +
+			"Xp:" + string(xp[i]) + "\n" +
 			"Hp: " + string(hp[i]) + "/" + string(hp_max[i]) + "\n" +
-			"Sp: " + string(sp[i]) + "/" + string(sp_max[i]) + "\n" +
-			"Lvl: " + string(lv[i])
+			"Sp: " + string(sp[i]) + "/" + string(sp_max[i]) + "\n"
 			)
 			array_push(char_desc,
 			"LV" + string(lv[i]) + " Nakolyn" + 
@@ -94,43 +109,9 @@ for (var i = 0; i < array_length(char_list); ++i) {
 	}
 }
 
-/*
-//object = obj_flower;
-//char_list = 0;
-//char_list_progress = 0;
-lv = 1;
-xp = 0;
-xp_max = 100;
-hp = 10;
-hp_max = 10;
-sp = 5;
-sp_max = 5;
-atk = 0;
-def = 0;
-magic  = 0;
-stat_3 = 0;
-stat_4 = 0;
-stat_5 = 0;
-//Flower
-global.flowerlv = 1;
-global.flowerxp = 0;
-global.flowerxp_max = 100;
-global.flowerhp = 50;
-global.flowerhp = 50;
-global.flowersp = 5;
-global.flowersp_max = 5;
-global.floweratk = 4;
-global.flowerdef = 2;
-global.flowermagic = 2;
-global.flowerstat3 = 0;
-global.flowerstat4 = 0;
-global.flowerstat5 = 0;
 
-scr_partymemb = ["Flower","Nako"];*/
 icon_sprite = [ICON_STATS,ICON_ITEMS,ICON_EQUIP,ICON_MAP,ICON_JOURNAL,ICON_CONFIG]
 
 space = 20;
 Xoffset = 2
 Yoffset = 12
-//hp_lenght = array_create(hp_max,hp)
-//sp_lenght = array_create(sp_max,sp)
