@@ -9,12 +9,12 @@ function scr_get_control()
 {
 	right_key = keyboard_check(vk_right) + gamepad_button_check( 0, gp_padr);
 		right_key = clamp( right_key, 0, 1);
-	right_key_pressed = keyboard_check(vk_up) + gamepad_button_check_pressed( 0, gp_padr);
+	right_key_pressed = keyboard_check(vk_right) + gamepad_button_check_pressed( 0, gp_padr);
 		right_key_pressed = clamp( right_key_pressed, 0, 1);
 		
 	left_key = keyboard_check(vk_left) + gamepad_button_check( 0, gp_padl);
 		left_key = clamp( left_key, 0, 1);
-	left_key_pressed = keyboard_check(vk_up) + gamepad_button_check_pressed( 0, gp_padl);
+	left_key_pressed = keyboard_check(vk_left) + gamepad_button_check_pressed( 0, gp_padl);
 		left_key_pressed = clamp( left_key_pressed, 0, 1);
 		
 	down_key = keyboard_check(vk_down) + gamepad_button_check( 0, gp_padd);

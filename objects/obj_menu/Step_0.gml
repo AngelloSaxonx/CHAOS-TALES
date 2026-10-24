@@ -35,15 +35,23 @@ else if (keyboard_check_pressed(vk_up))
 	}
 }
 
-if (select_character < 0)
 {
-	select_character = array_length(char_list) - 1
-	scroll_y -= array_length(char_list) - 3
-}
-else if (select_character >= array_length(char_list))
-{
-	select_character = 0
-	scroll_y += array_length(char_list) - 3
+	if (select_character < 0)
+	{
+		select_character = array_length(char_list) - 1
+		if (array_length(char_list) > 3)
+		{
+		scroll_y -= array_length(char_list) - 3
+		}
+	}
+	else if (select_character >= array_length(char_list))
+	{
+		select_character = 0
+		if (array_length(char_list) > 3)
+		{
+		scroll_y += array_length(char_list) - 3
+		}
+	}
 }
 
 }

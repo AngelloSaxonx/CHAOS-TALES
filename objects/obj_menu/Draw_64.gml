@@ -1,4 +1,5 @@
 //draw
+
 if (room != rm_titlescreen) && (global.paused != true)
 {
 	// code here

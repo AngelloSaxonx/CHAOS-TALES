@@ -28,7 +28,7 @@ if (room != rm_titlescreen)
 				)
 				array_push(char_2_stats,
 				"Lv: " + string(lv[i]) + "\n" +
-				"Xp:" + string(xp[i]) + "\n" +
+				"Xp: " + string(xp[i]) + "\n" +
 				"Hp: " + string(hp[i]) + "/" + string(hp_max[i]) + "\n" +
 				"Sp: " + string(sp[i]) + "/" + string(sp_max[i]) + "\n"
 				)
@@ -62,7 +62,7 @@ if (room != rm_titlescreen)
 				)
 				array_push(char_2_stats,
 				"Lv: " + string(lv[i]) + "\n" +
-				"Xp:" + string(xp[i]) + "\n" +
+				"Xp: " + string(xp[i]) + "\n" +
 				"Hp: " + string(hp[i]) + "/" + string(hp_max[i]) + "\n" +
 				"Sp: " + string(sp[i]) + "/" + string(sp_max[i]) + "\n"
 				)

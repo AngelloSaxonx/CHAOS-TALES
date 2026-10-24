@@ -73,7 +73,13 @@ scr_state_idle = function()
 
     if move_dir != 0 {face = move_dir};
 
-    
+    if (move_dir != 0){
+        xspd = move_dir * move_spd;
+    } else {
+       //xspd *= .98;
+       //if (xspd < 0.05) or (xspd > 0.05) xspd = 0;
+	   xspd = 0;
+    }
 	}
 
     //Attack
