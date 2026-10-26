@@ -1,3 +1,3 @@
 target_x = 620;
-target_y = 140
-target_rm = rm_scarlet_purple;
+target_y = 160
+target_rm = rm_scarlet_flowers_1;

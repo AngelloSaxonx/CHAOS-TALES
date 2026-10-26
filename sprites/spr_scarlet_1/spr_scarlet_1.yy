@@ -2,7 +2,7 @@
   "$GMSprite":"v2",
   "%Name":"spr_scarlet_1",
   "bboxMode":0,
-  "bbox_bottom":119,
+  "bbox_bottom":109,
   "bbox_left":0,
   "bbox_right":179,
   "bbox_top":0,
