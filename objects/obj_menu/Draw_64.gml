@@ -38,8 +38,14 @@ if (global.paused == true)
 	
 	draw_sprite_ext(spr_textbox_classic,0,
 	x - 10,
-	y+boarderY,
-	5,9,0,c_white,0.5
+	y+boarderY - 50,
+	5,4,0,c_white,0.5
+	)
+	
+	draw_sprite_ext(spr_textbox_classic,0,
+	x - 10,
+	y+boarderY + 40,
+	5,5,0,c_white,0.5
 	)
 	
 	draw_sprite_ext(spr_textbox_classic,0,
@@ -76,6 +82,8 @@ if (global.paused == true)
 	scr_menu_type(x,y,char_stats[select_character],string_length(char_stats),1,c_white,c_white)
 	////Char_2_stats
 	scr_menu_type(x,y,char_2_stats[select_character],string_length(char_2_stats),2,c_white,c_white)
+	////Ring_stats
+	scr_menu_type(x,y + 60,ring_stats,string_length(ring_stats),2,c_white,c_white)
 	////Char_desc
 	scr_menu_type(x,y,char_desc[select_character],string_length(char_desc),3,c_white,c_white)
 }

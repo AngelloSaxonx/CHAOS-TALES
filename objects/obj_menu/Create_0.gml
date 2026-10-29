@@ -14,6 +14,7 @@ char_desc = []
 
 ringp = []
 ringp_max = []
+ring_stats = []
 
 lv = []
 xp = []
@@ -34,6 +35,9 @@ char_2_stats = []
 
 array_push(ringp,0)
 array_push(ringp_max,0)
+array_push(ring_stats,
+	"RGP: " + string(ringp_max)
+	)
 
 for (var i = 0; i < array_length(char_list); ++i) {
 	switch (char_list[i])
