@@ -12,9 +12,12 @@ char_list = [obj_flower,obj_nako_party]
 char_icon = []
 char_desc = []
 
-ringp = []
-ringp_max = []
-ring_stats = []
+ringp = 0
+ringp_max = 0
+ring_stats = "RGP: " + string(ringp_max)
+
+total_key = 0//[]
+items_stats = []
 
 lv = []
 xp = []
@@ -33,11 +36,9 @@ desc = [];
 char_stats = []
 char_2_stats = []
 
-array_push(ringp,0)
-array_push(ringp_max,0)
-array_push(ring_stats,
-	"RGP: " + string(ringp_max)
-	)
+array_push(items_stats,
+"Keys: " + string(total_key)
+)
 
 for (var i = 0; i < array_length(char_list); ++i) {
 	switch (char_list[i])

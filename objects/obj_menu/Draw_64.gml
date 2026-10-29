@@ -11,8 +11,6 @@ if (room != rm_titlescreen) && (global.paused != true)
 
 if (global.paused == true)
 {
-	draw_text(x,y,select_character+scroll_y)
-	
 	var step = 22
 	
 	var boarderY = 10
@@ -83,7 +81,9 @@ if (global.paused == true)
 	////Char_2_stats
 	scr_menu_type(x,y,char_2_stats[select_character],string_length(char_2_stats),2,c_white,c_white)
 	////Ring_stats
-	scr_menu_type(x,y + 60,ring_stats,string_length(ring_stats),2,c_white,c_white)
+	scr_menu_type(x,y /*+ 60*/,ring_stats,string_length(ring_stats),2.5,c_white,c_white)
+	////Item_stats
+	scr_menu_type(x,y /*+ 60*/,items_stats[0],string_length(items_stats[0]),4,c_white,c_white)
 	////Char_desc
 	scr_menu_type(x,y,char_desc[select_character],string_length(char_desc),3,c_white,c_white)
 }

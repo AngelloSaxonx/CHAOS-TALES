@@ -21,7 +21,7 @@ if (global.paused == true)
 if (keyboard_check_pressed(vk_down))
 {
 	select_character += 1
-	if (select_character+scroll_y > 3)
+	if (select_character+scroll_y > 3) && (array_length(char_list) > 3)
 	{
 		scroll_y -= 1
 	}
@@ -29,7 +29,7 @@ if (keyboard_check_pressed(vk_down))
 else if (keyboard_check_pressed(vk_up))
 {
 	select_character -= 1
-	if (select_character+scroll_y < 0)
+	if (select_character+scroll_y < 0) && (array_length(char_list) > 3)
 	{
 		scroll_y += 1
 	}
