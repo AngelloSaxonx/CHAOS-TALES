@@ -83,7 +83,7 @@ if (global.paused == true)
 	////Ring_stats
 	scr_menu_type(x,y /*+ 60*/,ring_stats,string_length(ring_stats),2.5,c_white,c_white)
 	////Item_stats
-	scr_menu_type(x,y /*+ 60*/,items_stats[0],string_length(items_stats[0]),4,c_white,c_white)
+	scr_menu_type(x,y /*+ 60*/,money_stats,string_length(money_stats),4,c_white,c_white)
 	////Char_desc
 	scr_menu_type(x,y,char_desc[select_character],string_length(char_desc),3,c_white,c_white)
 }

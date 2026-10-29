@@ -16,8 +16,14 @@ ringp = 0
 ringp_max = 0
 ring_stats = "RGP: " + string(ringp_max)
 
-total_key = 0//[]
-items_stats = []
+total_pounds = 0//[]
+total_keys = 0//[]
+total_flowerps = 0//[]
+total_boneps = 0//[]
+money_stats = "P: " + string(total_pounds) + "   " +
+"K: " + string(total_keys) + "\n" +
+"FP: " + string(total_flowerps) + "   " +
+"BP: " + string(total_boneps)
 
 lv = []
 xp = []
@@ -36,9 +42,7 @@ desc = [];
 char_stats = []
 char_2_stats = []
 
-array_push(items_stats,
-"Keys: " + string(total_key)
-)
+
 
 for (var i = 0; i < array_length(char_list); ++i) {
 	switch (char_list[i])

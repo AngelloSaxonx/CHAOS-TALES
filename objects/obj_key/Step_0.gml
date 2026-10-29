@@ -2,8 +2,8 @@ if place_meeting(x,y,obj_flower)
 {
 	with (obj_menu)
 	{
-		total_key += 1
-		array_set(items_stats, 0, "Keys: " + string(total_key));
+		total_keys += 1
+		array_set(money_stats, 0, "@key@K: " + string(total_keys));
 	}
 	instance_destroy()
 }
