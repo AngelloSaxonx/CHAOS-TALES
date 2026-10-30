@@ -322,12 +322,12 @@ function scr_pause_text( x, y, _text, _progress, _type, c_color1, c_color2)
 		
 		//Mini picture
 		var _used = 0
-		for (var o = 0; o < array_length(key_word); ++o) {
+		for (var o = 0; o < array_length(actual_key_word); ++o) {
 				
-			if string_copy(_text,_i,string_length(key_word[o])) = key_word[o]
+			if string_copy(_text,_i,string_length(actual_key_word[o])) = actual_key_word[o]
 			{
 				draw_sprite_part_ext(spr_gamepad_icon,0,51,4,13,8,(x-18)+_draw_x+move_x,(y-6)+_draw_y+move_y-7,2,2,c_white,1)
-				_i += string_length(key_word[o]) - 1
+				_i += string_length(actual_key_word[o]) - 1
 				_draw_x += 10
 				_used = 1
 				break;
