@@ -211,6 +211,11 @@ function scr_menu_type( x, y, _text, _progress, _type, c_color1, c_color2)
 				move_x = -45;
 				move_y = 23//-60;
 			}
+			else
+			{
+				move_x = 0;
+				move_y = 0;
+			}
 			
 			var scale_x = 1;
 			var scale_y = 1;
@@ -289,6 +294,50 @@ function scr_menu_type( x, y, _text, _progress, _type, c_color1, c_color2)
 			draw_text_transformed_color(x + _draw_x+ move_x,y + _draw_y+move_y, _char, scale_x, scale_y, text_rotate ,current_color,current_color,current_color,current_color,scale_alpha);
 			_draw_x += string_width(_char);
 			}
+		}
+	}
+}
+
+
+function scr_pause_text( x, y, _text, _progress, _type, c_color1, c_color2)
+{
+	var _draw_x = 0;
+	var _draw_y = 0;
+	
+	for (var _i = 1; _i <= _progress;_i++)
+	{
+		var _char = string_char_at(_text, _i);
+		
+		/////Add effect
+		//Variable
+		var move_x = -(string_length(_text)*3.95);
+		var move_y = 0;
+			
+		var scale_x = 1;
+		var scale_y = 1;
+		var scale_alpha = 1;
+		var text_rotate = 0;
+		var current_color = c_color1; 
+		//Effect
+		
+		//Mini picture
+		var _used = 0
+		for (var o = 0; o < array_length(key_word); ++o) {
+				
+			if string_copy(_text,_i,string_length(key_word[o])) = key_word[o]
+			{
+				draw_sprite_part_ext(spr_gamepad_icon,0,51,4,13,8,(x-18)+_draw_x+move_x,(y-6)+_draw_y+move_y-7,2,2,c_white,1)
+				_i += string_length(key_word[o]) - 1
+				_draw_x += 10
+				_used = 1
+				break;
+			}
+		}
+		//Text
+		if (_used == 0)
+		{
+		draw_text_transformed_color(x + _draw_x+ move_x,y + _draw_y+move_y, _char, scale_x, scale_y, text_rotate ,current_color,current_color,current_color,current_color,scale_alpha);
+		_draw_x += string_width(_char);
 		}
 	}
 }
