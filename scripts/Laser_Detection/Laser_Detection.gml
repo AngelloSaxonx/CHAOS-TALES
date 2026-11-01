@@ -108,9 +108,9 @@ function Laser_Detection(){
 	}
 
 	/// Looking to the Front ///
-	//This time checking whatever his'X go to that range (lookig_range) until it hits a wall,
+	//This time checking whatever his'X go to that range (looking_range) until it hits a wall,
 	// if it hits a wall, it's checking a wall then.
-	for (var l = 0; l <= lookig_range; ++l) {
+	for (var l = 0; l <= looking_range; ++l) {
 		front_coll = l //<<< only l value needed
 		if (
 		collision_rectangle( 

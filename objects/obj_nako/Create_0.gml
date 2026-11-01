@@ -1,5 +1,5 @@
 #region
-randomise()
+randomise() //wby are we generating a new seed on create? 
 path = path_add();
 
 RealTarget = obj_flower
@@ -20,7 +20,7 @@ should_jump = false
 
 grav = .275;
 term_vel = 4;
-lookig_range = 60
+looking_range = 60
 
 ground_y = bbox_bottom
 
@@ -29,3 +29,17 @@ jump_range_limit = ( (floor(jump_frame)/2)*( (jump_spd-grav) + (jump_spd- (floor
 fall_detect = room_height/3;
 stop_chase = 0;
 #endregion
+
+#region Dash and Attack 
+//ask Resonance22 
+
+nakoPhase = 0 //switch statement 
+nakoResetMax = 4
+stopMovement = false 
+attackInProgress = false 
+
+dashDirection = point_distance(x,y,TargetX,TargetY)
+dashDuration = 0 //makes the dash happen if > 0 
+dashLength = 40 //distance 
+dashTime = 8 //frames 
+dashSpeed = dashLength/dashTime //sets the speed of the dash

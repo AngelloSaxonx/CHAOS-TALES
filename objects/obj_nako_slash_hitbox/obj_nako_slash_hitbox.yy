@@ -31,7 +31,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_nako_slash_hitbox",
+    "path":"sprites/spr_nako_slash_hitbox/spr_nako_slash_hitbox.yy",
+  },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }

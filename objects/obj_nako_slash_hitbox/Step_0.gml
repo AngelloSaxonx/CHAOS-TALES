@@ -45,3 +45,24 @@ if (inst != noone) && (inst.hittable == true)  && (hasHit == 0) and alarm[0] < 1
 	hasHit = 1;
 	alarm[1] = 60
 }
+
+if (alarm[0] < 11) 
+image_alpha -= 0.01 //fade out  
+if (image_alpha = 0) //failsafe destroy 
+instance_destroy() 
+
+//Experimental hitbox tracking 
+if (creatorId != undefined) {
+if (creatorId.image_xscale > 0) //if they are facing right 
+x = creatorId.x + creatorId.sprite_width/4 	//add to x offset 
+if (creatorId.image_xscale < 0) //negative value means mirrored 
+x = creatorId.x - creatorId.sprite_width/4  //subtract x offset 
+//position the hitbox 
+if creatorId.sprite_index = spr_nako_dash_swing_2
+y = creatorId.y - creatorId.sprite_height/4 
+if creatorId.sprite_index = spr_nako_dash_swing_4 
+y = creatorId.y + creatorId.sprite_height/4 
+} //end creatorId actually existing 	
+else { //if they do not exist 
+x += xspd //allows it to move 	
+}	

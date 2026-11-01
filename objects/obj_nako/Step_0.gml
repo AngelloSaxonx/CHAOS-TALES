@@ -1,6 +1,6 @@
 
 #region
-if (stop_chase == 0)
+if (stop_chase == 0) and (stopMovement == false) 
 {
 //Detecting Player
 Detect_Range()
@@ -11,7 +11,7 @@ Laser_Detection()
 /// Pathing ///
 Pathing()
 
-/// Findinng ///
+/// Finding ///
 Finding();
 
 /// Jump ///
@@ -64,11 +64,24 @@ else
 
 
 /// Movement
+//charge towards player if vector distance is less than our max speed 
 if (point_distance(x,y,TargetX,TargetY) < max_spd)
-{max_spd = abs(x-TargetX)}
+{max_spd = abs(x - TargetX)}
 else
 {max_spd = spd}
 
-x += (xspd*max_spd)
-y += yspd
+//Player detected in Dash range.. 
+if (point_distance(x,y,TargetX,TargetY) <= dashLength + sprite_width * 5)
+and alarm[0] = -1 {
+alarm[0] = 60 	
+}	
 
+if (dashDuration > 0) { //when dash is active 
+	xspd = lengthdir_x(dashSpeed,dashDirection) //vector based on the dash speed and direction
+	yspd = lengthdir_y(dashSpeed,dashDirection) // 	
+	dashDuration -= dashTime //decrement dashTime from dashDuration (if 0, dash stops)
+}
+
+/// Making it Move 
+x += (xspd * max_spd)
+y += yspd
