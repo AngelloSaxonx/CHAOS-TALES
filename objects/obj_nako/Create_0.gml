@@ -40,6 +40,6 @@ attackInProgress = false
 
 dashDirection = point_direction(x,y,TargetX,TargetY)
 dashDuration = 0 //makes the dash happen if > 0 
-dashLength = 40 //distance 
+dashLength = 20 //distance 
 dashTime = 8 //frames 
 dashSpeed = dashLength/dashTime //sets the speed of the dash
