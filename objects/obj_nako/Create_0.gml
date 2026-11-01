@@ -33,12 +33,12 @@ stop_chase = 0;
 #region Dash and Attack 
 //ask Resonance22 
 
-nakoPhase = 0 //switch statement 
+nakoPhase = 3 //switch statement 
 nakoResetMax = 4
 stopMovement = false 
 attackInProgress = false 
 
-dashDirection = point_distance(x,y,TargetX,TargetY)
+dashDirection = point_direction(x,y,TargetX,TargetY)
 dashDuration = 0 //makes the dash happen if > 0 
 dashLength = 40 //distance 
 dashTime = 8 //frames 

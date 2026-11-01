@@ -1,6 +1,6 @@
 
 #region
-if (stop_chase == 0) and (stopMovement == false) 
+if /*(stop_chase == 0) and*/ (stopMovement == false) 
 {
 //Detecting Player
 Detect_Range()
@@ -26,10 +26,39 @@ else if
 	should_jump = 0
 }
 
+if (yspd == 0)
+{
+	if (xspd != 0)
+	{
+		sprite_index = spr_nako_walk
+		image_xscale = sign(xspd)
+	}
+	else
+	{
+		sprite_index = spr_nako
+	}
+}
+else
+{
+	sprite_index = spr_nako_jump
+	if (xspd != 0)
+	{
+	image_xscale = sign(xspd)
+	}
+}
+
+
+}
+else
+{
+	if (nakoPhase == 0)
+	{
+		xspd = 0;
+	}
 }
 #endregion
 
-
+/*
 if keyboard_check_pressed(vk_space)
 {
 	if (stop_chase = 0)
@@ -41,8 +70,28 @@ if keyboard_check_pressed(vk_space)
 	{
 		stop_chase = 0
 	}
-}
+}*/
 
+
+/// Movement
+//charge towards player if vector distance is less than our max speed 
+if (point_distance(x,y,TargetX,TargetY) < max_spd)
+{max_spd = abs(x - TargetX)}
+else
+{max_spd = spd}
+
+//Player detected in Dash range.. 
+if (point_distance(x,y,TargetX,TargetY) <= abs(dashLength + sprite_width * 5))
+and (Target == RealTarget)
+and alarm[0] = -1 {
+alarm[0] = 60 	
+}	
+
+if (dashDuration > 0) { //when dash is active 
+	xspd = lengthdir_x(dashSpeed,dashDirection) //vector based on the dash speed and direction
+	yspd = lengthdir_y(dashSpeed,dashDirection) // 	
+	dashDuration -= dashTime //decrement dashTime from dashDuration (if 0, dash stops)
+}
 
 /// Collision ///
 if instance_place(x+xspd,y,obj_collision)
@@ -60,26 +109,6 @@ else
 	if (yspd < term_vel)
 	{yspd += grav}else
 	{yspd = term_vel}
-}
-
-
-/// Movement
-//charge towards player if vector distance is less than our max speed 
-if (point_distance(x,y,TargetX,TargetY) < max_spd)
-{max_spd = abs(x - TargetX)}
-else
-{max_spd = spd}
-
-//Player detected in Dash range.. 
-if (point_distance(x,y,TargetX,TargetY) <= dashLength + sprite_width * 5)
-and alarm[0] = -1 {
-alarm[0] = 60 	
-}	
-
-if (dashDuration > 0) { //when dash is active 
-	xspd = lengthdir_x(dashSpeed,dashDirection) //vector based on the dash speed and direction
-	yspd = lengthdir_y(dashSpeed,dashDirection) // 	
-	dashDuration -= dashTime //decrement dashTime from dashDuration (if 0, dash stops)
 }
 
 /// Making it Move 

@@ -13,7 +13,7 @@ switch(nakoPhase)
 {
 	case 0: //Halt - 1 second of warning 
 	stopMovement = true 
-	dashDirection = point_distance(x,y,TargetX,TargetY) 
+	dashDirection = point_direction(x,y,TargetX,TargetY)
 	//point_distance(TargetX,TargetY,x,y) //update the target 
 	alarm[0] = 60 
 	if ((image_xscale > 0) or xspd > 0) //not mirrored 
@@ -24,7 +24,7 @@ switch(nakoPhase)
 		image_xscale = 1 //don't mirror 
 	}
 	if ((image_xscale > 0) or xspd > 0) //not mirrored 
-	and (y < TargetY) //the target is below us  
+	and (y <= TargetY) //the target is below us  
 	and (x < TargetX) //target is to the right 
 	{
 		sprite_index = spr_nako_dash_swing_3 //preparing to strike 
@@ -38,12 +38,13 @@ switch(nakoPhase)
 		image_xscale = -1 //mirror 
 	}	
 	if ((image_xscale < 0) or (xspd < 0)) //Target Behind 
-	and (y < TargetY) //the target is below us  
-	and (x < TargetX) //target is to the left 
+	and (y <= TargetY) //the target is below us  
+	and (x > TargetX) //target is to the left 
 	{
 		sprite_index = spr_nako_dash_swing_3 //preparing to strike 
 		image_xscale = -1 //mirror 
 	}		
+	
 	break; 
 
 	case 1: //Dash Attack! 
