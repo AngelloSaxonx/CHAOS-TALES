@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"obj_hurtbox",
+  "%Name":"obj_hurtbox_player",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_hurtbox",
+  "name":"obj_hurtbox_player",
   "overriddenProperties":[],
   "parent":{
     "name":"Gameplay",

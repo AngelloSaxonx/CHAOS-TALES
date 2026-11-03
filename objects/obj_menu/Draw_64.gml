@@ -1,4 +1,4 @@
-//draw
+/// @description draw
 
 if (room != rm_titlescreen) && (global.paused != true)
 {
@@ -11,44 +11,44 @@ if (room != rm_titlescreen) && (global.paused != true)
 
 if (global.paused == true)
 {
-	var step = 22
+	var step = 22 //[Vibecode] - this Pause Draw GUI section 
 	
-	var boarderY = 10
-	
+	var _borderY = 10
+	// set the position of the drawn icons 
 	draw_set_halign(fa_center);
     draw_set_valign(fa_middle);
 	
-	for (var j = 0; j < array_length(icon_sprite); ++j) {
-		draw_sprite(icon_sprite[j],0,x-115+(j*40),y-110)
+	for (var j = 0; j < array_length(icon_sprite); ++j) { 
+		draw_sprite(icon_sprite[j],0,x-115+(j*40),y-110) //[Vibecode] 100%  
 	}
 	
 	draw_sprite_ext(spr_textbox_classic,0,
 	x - 110,
-	y+boarderY - 45,
+	y + _borderY - 45,
 	5,4.5,0,c_white,0.5
 	)
 	
 	draw_sprite_ext(spr_textbox_classic,0,
 	x - 110,
-	y+boarderY + 45,
+	y + _borderY + 45,
 	5,4.5,0,c_white,0.5
 	)
 	
 	draw_sprite_ext(spr_textbox_classic,0,
 	x - 10,
-	y+boarderY - 50,
+	y + _borderY - 50,
 	5,4,0,c_white,0.5
 	)
 	
 	draw_sprite_ext(spr_textbox_classic,0,
 	x - 10,
-	y+boarderY + 40,
+	y + _borderY + 40,
 	5,5,0,c_white,0.5
 	)
 	
 	draw_sprite_ext(spr_textbox_classic,0,
 	x + 100,
-	y+boarderY,
+	y+_borderY,
 	6,9,0,c_white,0.5
 	)
 	
@@ -60,7 +60,7 @@ if (global.paused == true)
     surf = surface_create(94, 84);
 	}
 	surface_set_target(surf);
-	//setting the invis black cover outside of boarder so they're stay hidden
+	//setting the invis black cover outside of boarder so they're stay hidden [Note: Erm. What?]
 	draw_clear_alpha(c_black,0)
 	//now draw icons and texts
 	for (var i = 0; i < array_length(char_list); ++i) {
@@ -72,11 +72,12 @@ if (global.paused == true)
 	}
 	//Reset the surface back to the main application surface
 	surface_reset_target();
-	//then draw the invis cover
+	//then draw the invis cover [Note: UHH] 
 	draw_surface(surf,x-157,y-77)
 	#endregion
 	
 	////Char_stats
+	//[Note] Why is none of this explained 
 	scr_menu_type(x,y,char_stats[select_character],string_length(char_stats),1,c_white,c_white)
 	////Char_2_stats
 	scr_menu_type(x,y,char_2_stats[select_character],string_length(char_2_stats),2,c_white,c_white)

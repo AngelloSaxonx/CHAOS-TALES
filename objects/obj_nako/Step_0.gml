@@ -1,6 +1,6 @@
 
-#region
-if /*(stop_chase == 0) and*/ (stopMovement == false) 
+#region [Vibecode] 
+if /*(stop_chase == 0) and*/ (stopMovement = false) 
 {
 //Detecting Player
 Detect_Range()
@@ -14,7 +14,7 @@ Pathing()
 /// Finding ///
 Finding();
 
-/// Jump ///
+/// Jump /// - Shenvin broke this compared to last Resonance push 
 if (should_jump = true) 
 && (collision_rectangle(bbox_left,bbox_bottom,bbox_right,bbox_bottom+1,obj_collision,true,true))//if he touch ground
 {
@@ -23,7 +23,7 @@ if (should_jump = true)
 else if 
 !collision_rectangle(bbox_left,bbox_bottom,bbox_right,bbox_bottom+1+yspd,obj_collision,true,true)//otherwise not allowed
 {
-	should_jump = 0
+	should_jump = false 
 }
 
 if (yspd == 0)
@@ -47,7 +47,7 @@ else
 	}
 }
 
-
+//[Note] What ?
 }
 else
 {
@@ -74,17 +74,22 @@ if keyboard_check_pressed(vk_space)
 
 
 /// Movement
-//charge towards player if vector distance is less than our max speed 
+//charge towards player if vector distance is less than our max speed [Vibecode] 
 if (point_distance(x,y,TargetX,TargetY) < max_spd)
-{max_spd = abs(x - TargetX)}
+{
+	max_spd = abs(x - TargetX)
+}
 else
-{max_spd = spd}
+{
+	max_spd = spd
+}
 
-//Player detected in Dash range.. 
+#region Sensible Movement 
+//Res' code (this works)  
 if (point_distance(x,y,TargetX,TargetY) <= abs(dashLength + sprite_width * 5))
 and (Target == RealTarget)
 and alarm[0] = -1 {
-alarm[0] = 60 	
+alarm[0] = 60 + irandom(1) * 5
 }	
 
 if (dashDuration > 0) { //when dash is active 
@@ -92,25 +97,31 @@ if (dashDuration > 0) { //when dash is active
 	yspd = lengthdir_y(dashSpeed,dashDirection) // 	
 	dashDuration -= dashTime //decrement dashTime from dashDuration (if 0, dash stops)
 }
+var _predictiveY = bbox_bottom + round(sprite_height/20) //helps with Collision
 
-/// Collision ///
-if instance_place(x+xspd,y,obj_collision)
+#endregion Sensible Movement 
+
+/// Collision /// - [Vibecode] - [Repaired 50%] 
+if instance_place(x + xspd,y ,obj_collision)
+or place_meeting(bbox_left - xspd, y, obj_collision) //fix attempted 
+or place_meeting(bbox_right + xspd, y, obj_collision) //fix attempted 
 {
 	xspd = 0;
 }
-
-if instance_place(x,y+1+yspd,obj_collision)
+if instance_place(x,y + 1 + yspd, obj_collision)
+or place_meeting(x,_predictiveY,obj_collision) //fix attempted 
 {
 	yspd = 0;
 }
-else
+else //[Note] Erm, so, if we're stuck in a wall just dont move? else... fall??? 
 {
-	/// Gravity ///
-	if (yspd < term_vel)
-	{yspd += grav}else
+	/// Gravity /// [Vibecode] 
+	if (yspd < term_vel) //Terminate Vel'koz? probably terminal velocity :shrug:
+	{yspd += grav}
+	else
 	{yspd = term_vel}
 }
 
-/// Making it Move 
+/// Making it Move - sensible  
 x += (xspd * max_spd)
 y += yspd

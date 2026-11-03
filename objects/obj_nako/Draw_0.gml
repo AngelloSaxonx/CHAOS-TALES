@@ -6,8 +6,8 @@ draw_rectangle(TargetX-(sprite_width/2),TargetY-(sprite_height/3),TargetX+(sprit
 
 draw_line(x,y,TargetX,TargetY) //i assume for targeting 
 
-draw_text(x,y,point_distance(x,y,TargetX,TargetY))
+draw_text(x,y+16,point_distance(x,y,TargetX,TargetY))
 
-draw_text(x,y+10,abs(dashLength + sprite_width * 5))
+draw_text(x,y+32,abs(dashLength + sprite_width * 5))
 
-draw_text(x,y-10,nakoPhase)
+draw_text(x,y+48,nakoPhase)

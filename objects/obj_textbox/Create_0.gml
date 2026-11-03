@@ -1,4 +1,7 @@
+///@description Refactor 
+
 //Position
+//[Vibecode] 100% my goodness call the exorcist (hard-coded to pixel, gui spam, redundant variables, eww
 x_margin = 5;
 y_margin = 85;
 padding = 8;
@@ -33,7 +36,7 @@ speaker_color = #ff0000
 actions = [];
 current_action = -1;
 
-//DO NOT EDIT!!
+//DO NOT EDIT!! // [Vibe Code] 
 text = "";
 text_progress = 0;
 text_length = 0;
@@ -85,7 +88,7 @@ next = function()
 	
 }
 
-set_text = function(_set_text,_color,effect_on,_startE,_endE,_spd,_time,_startS,_endS)
+set_text = function(_set_text,_color,effect_on,_startE,_endE,_spd,_time,_startS,_endS) //[Vibecode] 100%, beyond unusable 
 {
 	text = _set_text;
 	sub_text_color = _color;
