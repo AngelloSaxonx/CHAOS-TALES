@@ -210,6 +210,7 @@
     {"id":{"name":"spr_flower_stab_final","path":"sprites/spr_flower_stab_final/spr_flower_stab_final.yy",},},
     {"id":{"name":"spr_flower_stab_hitbox","path":"sprites/spr_flower_stab_hitbox/spr_flower_stab_hitbox.yy",},},
     {"id":{"name":"spr_flower_stab_left_arm","path":"sprites/spr_flower_stab_left_arm/spr_flower_stab_left_arm.yy",},},
+    {"id":{"name":"spr_flower_walk_1","path":"sprites/spr_flower_walk_1/spr_flower_walk_1.yy",},},
     {"id":{"name":"spr_flower_walk","path":"sprites/spr_flower_walk/spr_flower_walk.yy",},},
     {"id":{"name":"spr_flower","path":"sprites/spr_flower/spr_flower.yy",},},
     {"id":{"name":"spr_gamepad_icon","path":"sprites/spr_gamepad_icon/spr_gamepad_icon.yy",},},
@@ -277,8 +278,8 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"Test_1","path":"rooms/Test_1/Test_1.yy",},},
     {"roomId":{"name":"rm_titlescreen","path":"rooms/rm_titlescreen/rm_titlescreen.yy",},},
+    {"roomId":{"name":"Test_1","path":"rooms/Test_1/Test_1.yy",},},
     {"roomId":{"name":"rm_darkfields_1","path":"rooms/rm_darkfields_1/rm_darkfields_1.yy",},},
     {"roomId":{"name":"rm_darkfields_2","path":"rooms/rm_darkfields_2/rm_darkfields_2.yy",},},
     {"roomId":{"name":"rm_scarlet_intro","path":"rooms/rm_scarlet_intro/rm_scarlet_intro.yy",},},
