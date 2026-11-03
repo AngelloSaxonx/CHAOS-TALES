@@ -210,7 +210,6 @@
     {"id":{"name":"spr_flower_stab_final","path":"sprites/spr_flower_stab_final/spr_flower_stab_final.yy",},},
     {"id":{"name":"spr_flower_stab_hitbox","path":"sprites/spr_flower_stab_hitbox/spr_flower_stab_hitbox.yy",},},
     {"id":{"name":"spr_flower_stab_left_arm","path":"sprites/spr_flower_stab_left_arm/spr_flower_stab_left_arm.yy",},},
-    {"id":{"name":"spr_flower_walk_1","path":"sprites/spr_flower_walk_1/spr_flower_walk_1.yy",},},
     {"id":{"name":"spr_flower_walk","path":"sprites/spr_flower_walk/spr_flower_walk.yy",},},
     {"id":{"name":"spr_flower","path":"sprites/spr_flower/spr_flower.yy",},},
     {"id":{"name":"spr_gamepad_icon","path":"sprites/spr_gamepad_icon/spr_gamepad_icon.yy",},},
