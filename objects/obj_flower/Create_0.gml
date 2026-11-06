@@ -105,24 +105,21 @@ scr_state_idle = function()
 		image_speed = 1
 		if abs(xspd) == 0 
 	    {
-			if (from != noone)
-			{
-				if sprite_index != attack_spr[0]
-		        {image_index = 0}
-				sprite_index = attack_spr[0]
-			}
-			else
-			{
-				if sprite_index != idle_spr
-		        {image_index = 0}
-				sprite_index = idle_spr
-			}
+			if sprite_index != idle_spr {image_index = 0} 
+            sprite_index = idle_spr
+			
 		}
 		//Walk
 		
+        if abs(move_dir) == 1
+        {
+            
 			if sprite_index != walk_spr
 		    {image_index = 0}
 			sprite_index = walk_spr
+            
+        }
+        
 	}
 	//Jump
 	else
