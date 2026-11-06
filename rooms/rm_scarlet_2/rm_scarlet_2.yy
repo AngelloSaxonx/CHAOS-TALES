@@ -31,10 +31,12 @@
     {"name":"inst_305FE0B1","path":"rooms/rm_scarlet_2/rm_scarlet_2.yy",},
     {"name":"inst_16DB3A57","path":"rooms/rm_scarlet_2/rm_scarlet_2.yy",},
     {"name":"inst_1FD43725","path":"rooms/rm_scarlet_2/rm_scarlet_2.yy",},
+    {"name":"inst_78201C88","path":"rooms/rm_scarlet_2/rm_scarlet_2.yy",},
   ],
   "isDnd":false,
   "layers":[
     {"$GMRInstanceLayer":"","%Name":"obj_main","depth":0,"effectEnabled":true,"effectType":null,"gridX":20,"gridY":20,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
+        {"$GMRInstance":"v4","%Name":"inst_78201C88","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_78201C88","objectId":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":0.0,"y":0.0,},
         {"$GMRInstance":"v4","%Name":"inst_570BF11C","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_570BF11C","objectId":{"name":"obj_scarlet_tree","path":"objects/obj_scarlet_tree/obj_scarlet_tree.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":240.0,"y":440.0,},
         {"$GMRInstance":"v4","%Name":"inst_588E7AA6","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_588E7AA6","objectId":{"name":"obj_scarlet_tree","path":"objects/obj_scarlet_tree/obj_scarlet_tree.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":200.0,"y":440.0,},
         {"$GMRInstance":"v4","%Name":"inst_19BE7E60","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_19BE7E60","objectId":{"name":"obj_scarlet_tree","path":"objects/obj_scarlet_tree/obj_scarlet_tree.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":20.0,"y":140.0,},
