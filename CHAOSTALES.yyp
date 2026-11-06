@@ -8,7 +8,7 @@
     "children":[],
     "name":"Default",
   },
-  "defaultScriptType":0,
+  "defaultScriptType":1,
   "Folders":[
     {"$GMFolder":"","%Name":"Extensions","folderPath":"folders/Extensions.yy","name":"Extensions","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Fonts","folderPath":"folders/Fonts.yy","name":"Fonts","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -119,6 +119,7 @@
     {"id":{"name":"From Shenvin","path":"notes/From Shenvin/From Shenvin.yy",},},
     {"id":{"name":"Main","path":"notes/Main/Main.yy",},},
     {"id":{"name":"bg_scarlet_fields","path":"objects/bg_scarlet_fields/bg_scarlet_fields.yy",},},
+    {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},},
     {"id":{"name":"obj_cemetery_statue_a","path":"objects/obj_cemetery_statue_a/obj_cemetery_statue_a.yy",},},
     {"id":{"name":"obj_cemetery_tomb","path":"objects/obj_cemetery_tomb/obj_cemetery_tomb.yy",},},
     {"id":{"name":"obj_climb","path":"objects/obj_climb/obj_climb.yy",},},

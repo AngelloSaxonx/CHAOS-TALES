@@ -24,27 +24,45 @@ face = 1; //...
 
 run_type = 0; //labels are a good thing to have if this is a switch statement...  
 move_dir = 0; //an angle, probably 
-move_spd = 2 //pixels per frame 
+
+
+move_spd = 2.5 //pixels per frame  //viktorery: LET IT BE IN THE OPEN IM STURGGLING TO FIND IT
+
+
 xspd = 0;
 yspd = 0;
 
-grav = .275;
+grav = 0.5;
 term_vel = 4;
 on_ground = true;
 on_water = false
 in_transition = false
 ledge_in = false
 
-can_jump = true // in case
-jump_max = 2;
-jump_count = 0;
-jump_hold_timer = 0;
-jump_hold_frames[0] = 16;
-//it'd be peak cinema if it didn't need to be refactored :'( this'll take me time 
-jspd[0] = -3*2; //Shenvin: Double the jump
-jump_hold_frames[1] = 12;
-jspd[1] = -5*2; //Shenvin: This too
-ledge_jspd = 6
+jumpMax = 1; 
+
+jumpCount = 0;
+jumpHoldTimer = 0;
+
+jumpHoldFrames = 20;
+
+//buffered jump
+bufferTime = 8; 
+jumpKeyBuffered = 0;
+jumpKeyBufferTimer = 0;
+
+
+//coyote time
+coyoteHangFrames = 2; 
+coyoteHangTimer = 0;
+
+coyoteJumpFrames = 7; 
+coyoteJumpTimer = 0;
+//it'd be peak cinema if it didn't need to be refactored :'( this'll take me time / vik: i got you
+jspd = -4; //Shenvin: Double the jump
+
+
+
 
 can_dash = true;
 dash_distance = 40;
@@ -56,77 +74,31 @@ double_jump = true;
 
 scr_state_idle = function()
 {
-	if (sprite_index == spr_flower_hurt) && (hurted == 0)
-	{
-		hurted = 1
-		alarm[0] = 40;
-		xspd = knockX;
-		yspd = knockY;
-	}
 	
-	if (hurted == 1) && (place_meeting(x,y+yspd,obj_collision)) //so sometimes he knows to use place_meeting
-	{sprite_index = idle_spr;hurted = 0;knockX = 0;knockY = 0;}
-	
-	
-	if (hurted == 0) && (!instance_exists(obj_textbox))
-	{
     move_dir = right_key - left_key; //if we have keys for movement, why not Z and gamepad? 
 
     if move_dir != 0 {face = move_dir};
 
-    if (move_dir != 0){
-        xspd = move_dir * move_spd;
-    } else {
-       //xspd *= .98;
-       //if (xspd < 0.05) or (xspd > 0.05) xspd = 0;
-	   xspd = 0;
-    }
-	}
-
-    //Attack
-	#region
-	if (!instance_exists(obj_textbox))
-	{
-	Attack_stage_for_player() //i am scared to check 
-	}
-	#endregion
-	
-    if yspd >= 0 && !place_meeting(x + xspd, y + 1, obj_collision)
-    {
     
-    }
+    xspd = move_dir * move_spd;
+    
+
+    
 	
-	if (on_water = true)
-	{
-		state = scr_state_swim; //bruh
-	}
+	
 	
 	if !place_meeting(x,y,obj_interact)
 	{
-		if (hurted == 0) && (!instance_exists(obj_textbox))
+		if !instance_exists(obj_textbox)
 		{
 	    scr_state_jump()
 		}
 	}
+    
+    
     scr_movement(); //not this script again :NotLikeRowlet: 
 	
-	//[Vibecode] [Refactor] one of the worst pieces of code left to us, and that is saying something
-	var coll = instance_place(x+(move_dir*move_spd),y,obj_collision)
-	if ( (coll && (coll.bbox_top > bbox_top+1))) //this coll junk is textbook vibeslop.... and wow this is bad
-	&& !(instance_place(x,y+1,obj_collision))
-	{
-		var stop_if_up = collision_rectangle(coll.bbox_left,coll.bbox_top-1,coll.bbox_right,coll.bbox_top,obj_collision,false,true)
-		if (stop_if_up == noone) || (stop_if_up != noone && stop_if_up == id) || (stop_if_up != noone && stop_if_up != id && 
-		((coll.bbox_right > stop_if_up.bbox_right && move_dir = -1) || (coll.bbox_left < stop_if_up.bbox_left && move_dir = 1)) )
-		{
-			state = scr_wall_recovery
-			xspd = 0;
-			yspd = 0;
-		}
-	}
-
-	if (hurted == 0)
-	{
+	
 	if on_ground
 	//Idle
 	{
@@ -165,91 +137,13 @@ scr_state_idle = function()
 			}
 			else
 			{
-				if (jump_key_pressed && can_jump) {image_index = 0} //Double jumping refresh animation
+				if (jump_key && on_ground=true) {image_index = 0} //Double jumping refresh animation
 			}
 			sprite_index = jump_spr
 		
 	}
-	}
+	
 };
 
-scr_wall_recovery = function()
-{
-	//grabbed
-	if sprite_index != ledge_spr
-    {image_index = 0}
-	sprite_index = ledge_spr
-	
-	if (image_index > 1)
-	{
-		//start rolling
-		if (ledge_in == false)
-		{yspd = -ledge_jspd; ledge_in = true}
-		if (yspd < 0)
-		{
-			if (image_index >= image_number-2)
-			{
-				image_index = 2
-			}
-			xspd = (face*move_spd)
-		}
-		//staring backward
-		else if (!place_meeting(x,y+1,obj_collision)) && (yspd >= 0){
-			//if doesn't land in time, switch to idle
-			if (ledge_fall_time <= 0)
-			{
-				ledge_fall_time = 20;
-				state = scr_state_idle;
-				ledge_in = false;
-				image_index = 2;
-				xspd = 0;
-			}
-			// if have time, still rolling
-			else
-			{
-				ledge_fall_time--;
-				if (image_index >= image_number-2)
-				{
-					image_index = 2
-				}
-				xspd = (face*move_spd)
-			}
-		}
-		//if land in time, landing animation
-		else if (place_meeting(x,y+1,obj_collision)) && (yspd >= 0)
-		{
-			if (ledge_fall_time > 0)
-			{
-			if (ledge_fall_time > 5) {ledge_fall_time = 5}
-			image_index = image_number-1
-			image_speed = 0;
-			ledge_fall_time -= 0.5;
-			}
-			
-			if (ledge_fall_time <= 0)
-			{image_speed = 1;state = scr_state_idle; ledge_in = false;ledge_fall_time = 20;}
-			xspd = 0
-		}
-		//Grav
-		if !place_meeting(x,y+1,obj_collision)
-		{
-			if (yspd < term_vel)
-			{yspd += grav}else
-			{yspd = term_vel}
-		}
-	}
-	//Coll
-	if place_meeting(x,y+yspd,obj_collision)
-	{
-		yspd = 0
-	}
-	if place_meeting(x+xspd,y,obj_collision)
-	{
-		xspd = 0;
-	}
-	//Movement
-	x += xspd
-	y += yspd
-}
 
 state = scr_state_idle;

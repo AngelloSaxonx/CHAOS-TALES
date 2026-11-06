@@ -266,14 +266,32 @@ scr_wall_recovery = function()
 			{yspd = term_vel}
 		}
 	}
+    var _subPixel
 	//Coll
 	if place_meeting(x,y+yspd,obj_collision)
 	{
-		yspd = 0
+		var _pixelCheck = _subPixel * sign(yspd); 
+        
+            while !place_meeting(x, y + _pixelCheck, obj_collision)
+            {
+                y += _subPixel * sign(yspd);
+            };
+        
+            
+            yspd = 0;
 	}
+    
 	if place_meeting(x+xspd,y,obj_collision)
 	{
-		xspd = 0;
+		var _pixelCheck = _subPixel * sign(xspd);
+            
+            while !place_meeting(x + _pixelCheck, y, obj_collision)
+            {
+                x+= _pixelCheck;
+            }
+            
+            //set xspd to zero to "collide"
+            xspd = 0;
 	}
 	//Movement
 	x += xspd

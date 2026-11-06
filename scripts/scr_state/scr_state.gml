@@ -1,84 +1,112 @@
+
+
 function scr_state_jump(){
-    if double_jump = false{jump_max = 1;}
-    else {jump_max = 2;}
-	if (jump_count < jump_max) {can_jump = true} else {can_jump = false}
+    
+    
+    if jump_key_pressed
+    {
+        jumpKeyBufferTimer = bufferTime;
+        
+    }
+    if jumpKeyBufferTimer > 0
+    {
+        jumpKeyBuffered = 1;
+        jumpKeyBufferTimer--;
+    }else{
+        jumpKeyBuffered = 0;
+    }
+    //reset jump count
+    if on_ground{
+        
+        jumpCount = 0;
+        jumpHoldTimer = 0;
+        coyoteJumpTimer = coyoteJumpFrames;
+        
+        
+    } else {
+        coyoteJumpTimer--;
+        if jumpCount == 0 and coyoteJumpTimer <= 0 {jumpCount = 1; };
+    }
+    //jump
+        
+        if jumpKeyBuffered and jumpCount < jumpMax
+        {
+            //reset buffer
+            jumpKeyBuffered = false;
+            jumpKeyBufferTimer = 0;
+            
+            //increase number of perfomed jumps
+            jumpCount++;
+            fallendowntimer = 0
+            
+            //jump
+            jumpHoldTimer = jumpHoldFrames;
+            
+            on_ground = false
+        }
+        //jump based on holding
+        if jumpHoldTimer>0
+        {
+            yspd = jspd;
+            
+            jumpHoldTimer--;
+        }
+        if not jump_key{
+            jumpHoldTimer = 0;
+        }  
 	
-    if (on_ground || on_water)
-    {
-        jump_count = 0;
-        jump_hold_timer = 0;
-    }
-    else
-    {
-        if jump_count == 0{jump_count = 1;}
-    }
-    // Jump
-    if jump_key_buffered && jump_count < jump_max
-    {
-        jump_key_buffered = false;
-        jump_key_buffer_timer = 0;
+	
+    
+} //vik here, i rewrote it with mine, it has coyote stuff and hold to jump!
 
-        jump_count++;
-
-        jump_hold_timer = jump_hold_frames[jump_count-1];
-    }
-    if !jump_key
-    {
-        jump_hold_timer = 0;
-		
-		if (yspd < 0)
-		{
-			yspd += grav
-		}
-    }
-    if jump_hold_timer > 0
-    {
-        yspd = (jspd[jump_count-1]) / max(1,1+( (16-jump_hold_timer)*0.125) ) 
-		
-        jump_hold_timer--;
-    }
-}
-
-function scr_movement(_use_grav = true, _use_term_vel = true){
-    // X move
-    var _sub_pixel = .5;
-    if place_meeting(x + xspd ,y , obj_collision){
-        if !place_meeting(x + xspd, y - abs(xspd)-1, obj_collision){
-            while place_meeting(x + xspd, y, obj_collision) {y -= _sub_pixel;};
-        }else{
-            var _pixel_check = _sub_pixel * sign(xspd);
-            while !place_meeting(x + _pixel_check , y, obj_collision){
-                x += _pixel_check;
-            }
-            xspd = 0;
-		}
-	}
-	if (!in_transition && !instance_exists(obj_textbox))
+function scr_movement(){
+    var _subPixel = 0.5
+	if place_meeting(x+xspd,y,obj_collision)
 	{
-    x += xspd;
-	}
+		var _pixelCheck = _subPixel * sign(xspd);
+            
+            while !place_meeting(x + _pixelCheck, y, obj_collision)
+            {
+                x+= _pixelCheck;
+            }
+            
+            //set xspd to zero to "collide"
+            xspd = 0;
+	} 
+    
+    
+	//x Movement     viktorery: omg, there was around so much x += xspd
+	x += xspd
+	
 
-    // Y move
+    
 
     // gravity and terminal speed only in free state
-    if _use_grav yspd += grav;
-    if _use_term_vel && yspd > term_vel {yspd = term_vel};
+    yspd += grav;
+    if yspd > term_vel {yspd = term_vel};
 	
-    if place_meeting( x, y + yspd, obj_collision)
-    {
-		
-        if yspd < 0
-        {
-            jump_hold_timer = 0;
-        }
-
-        yspd = 0;
-    }
-
-    on_ground = yspd >= 0 && place_meeting( x, y+1, obj_collision)
-	
-	if (!in_transition)
+    var _subPixel = 0.5
+	if place_meeting(x,y+yspd,obj_collision)
 	{
-    y += yspd;
+		var _pixelCheck = _subPixel * sign(yspd); 
+        
+            while !place_meeting(x, y + _pixelCheck, obj_collision)
+            {
+                y += _subPixel * sign(yspd);
+            };
+        
+            if yspd < 0
+            {
+                jumpHoldTimer = 0;
+            }
+
+            yspd = 0;
 	}
+		
+    y += yspd;    
+
+    on_ground = yspd >= 0 and place_meeting( x, y+1, obj_collision)
+	
+	
+	
 }
