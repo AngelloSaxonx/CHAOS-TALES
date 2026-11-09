@@ -8,14 +8,10 @@ scr_contol_setup() //initialize presumably potato script, or the Prologue obj wo
 mask_spr = spr_flower; //[Vibecode] [Refactor] - redundant variables and nonsense 
 idle_spr = spr_flower;
 walk_spr = spr_flower_walk;
-ledge_spr = spr_flower_ledge
+ledge_spr = spr_flower_ledge_1
 jump_spr = spr_flower_jump;
-dash_air_spr = spr_flower_round;
+round_spr = spr_flower_round;
 
-attack_spr[0] = spr_flower_stab_final
-attack_spr[1] = spr_flower_stab_body
-attack_spr[2] = spr_flower_stab_dagger
-attack_spr[3] = spr_flower_stab_left_arm
 image_moving = 0; //bruh 
 hurted = 0; //... 
 knockX = 0;

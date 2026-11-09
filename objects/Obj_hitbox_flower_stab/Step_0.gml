@@ -50,7 +50,7 @@ if (inst != noone) && (inst.hittable == true)  && (hasHit == 0)
 
 
 if (player_inst != noone)
-&& (player_inst.sprite_index == spr_flower_ledge || player_inst.sprite_index == spr_flower_round)
+&& (player_inst.sprite_index == spr_flower_ledge_1 || player_inst.sprite_index == spr_flower_round)
 {
 	instance_destroy()
 }
