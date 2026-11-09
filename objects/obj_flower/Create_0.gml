@@ -9,7 +9,8 @@ mask_spr = spr_flower; //[Vibecode] [Refactor] - redundant variables and nonsens
 idle_spr = spr_flower;
 walk_spr = spr_flower_walk;
 ledge_spr = spr_flower_ledge_1
-jump_spr = spr_flower_jump;
+jump1_spr = spr_flower_jump_1;
+jump2_spr = spr_flower_jump_2;
 round_spr = spr_flower_round;
 
 image_moving = 0; //bruh 
@@ -123,7 +124,7 @@ scr_state_idle = function()
 	//Airdash
 		
 		//Jump
-			if sprite_index != jump_spr
+			if sprite_index != jump1_spr
 		    {
 				if (jump_key) {image_index = 0} // if you press jump
 				else {image_index = 2} // Otherwise act like falling
@@ -132,7 +133,7 @@ scr_state_idle = function()
 			{
 				if (jump_key && on_ground=true) {image_index = 0} //Double jumping refresh animation
 			}
-			sprite_index = jump_spr
+			sprite_index = jump1_spr
 		
 	}
 	

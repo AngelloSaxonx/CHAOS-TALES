@@ -9,7 +9,7 @@ mask_spr = spr_flower; //[Vibecode] [Refactor] - redundant variables and nonsens
 idle_spr = spr_flower;
 walk_spr = spr_flower_walk;
 ledge_spr = spr_flower_ledge_1
-jump_spr = spr_flower_jump;
+jump_spr = spr_flower_jump_1;
 round_spr = spr_flower_round;
 
 image_moving = 0; //bruh 
