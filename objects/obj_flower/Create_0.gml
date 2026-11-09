@@ -56,7 +56,7 @@ coyoteHangTimer = 0;
 coyoteJumpFrames = 7; 
 coyoteJumpTimer = 0;
 //it'd be peak cinema if it didn't need to be refactored :'( this'll take me time / vik: i got you
-jspd = -4; //Shenvin: Double the jump
+jspd = -4; 
 
 
 

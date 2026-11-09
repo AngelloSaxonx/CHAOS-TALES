@@ -116,7 +116,6 @@
   "name":"CHAOSTALES",
   "resources":[
     {"id":{"name":"Credits","path":"notes/Credits/Credits.yy",},},
-    {"id":{"name":"From Shenvin","path":"notes/From Shenvin/From Shenvin.yy",},},
     {"id":{"name":"Main","path":"notes/Main/Main.yy",},},
     {"id":{"name":"bg_scarlet_fields","path":"objects/bg_scarlet_fields/bg_scarlet_fields.yy",},},
     {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},},
