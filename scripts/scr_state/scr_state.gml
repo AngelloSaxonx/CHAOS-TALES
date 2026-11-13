@@ -110,3 +110,11 @@ function scr_movement(){
 	
 	
 }
+
+function scr_state_attack()
+{
+    
+    instance_create_depth(x,y, -9999, obj_slash)
+    
+}
+

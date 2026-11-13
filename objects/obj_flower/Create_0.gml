@@ -55,10 +55,12 @@ coyoteHangTimer = 0;
 
 coyoteJumpFrames = 7; 
 coyoteJumpTimer = 0;
+
 //it'd be peak cinema if it didn't need to be refactored :'( this'll take me time / vik: i got you
 jspd = -4; 
 
-
+//cool attack
+attacking = false
 
 
 can_dash = true;
@@ -95,28 +97,42 @@ scr_state_idle = function()
     
     scr_movement(); //not this script again :NotLikeRowlet: 
 	
+    //attacking! and attack checks
+    if attack_key
+    {
+        scr_state_attack()
+    }
+    
+    if !instance_exists(obj_slash){
+        attacking = false
+    }
+        
+    if instance_exists(obj_slash)
+    {
+        attacking = true
+    }
+    
+    
 	
 	if on_ground
 	//Idle
 	{
-		image_speed = 1
-		if abs(xspd) == 0 
-	    {
-			if sprite_index != idle_spr {image_index = 0} 
-            sprite_index = idle_spr
-			
-		}
-		//Walk
-		
-        if abs(move_dir) == 1
+        if attacking = false
         {
-            
-			if sprite_index != walk_spr
-		    {image_index = 0}
-			sprite_index = walk_spr
-            
-        }
+      		if abs(xspd) == 0 
+      	    {
+                sprite_index = idle_spr
+      		} 
+            //Walk
+		
+            if abs(move_dir) == 1
+            {
+    			sprite_index = walk_spr
+            }
         
+        } else if attacking = true {
+            sprite_index = spr_flower_stab_1 //attacking!
+        }
 	}
 	//Jump
 	else
