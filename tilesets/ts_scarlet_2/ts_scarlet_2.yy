@@ -8,7 +8,7 @@
     "TileSerialiseData":[],
   },
   "name":"ts_scarlet_2",
-  "out_columns":8,
+  "out_columns":7,
   "out_tilehborder":2,
   "out_tilevborder":2,
   "parent":{
@@ -17,7 +17,10 @@
   },
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_scarlet_2",
+    "path":"sprites/spr_scarlet_2/spr_scarlet_2.yy",
+  },
   "spriteNoExport":false,
   "textureGroupId":{
     "name":"Default",
@@ -31,5 +34,5 @@
   "tileWidth":20,
   "tilexoff":0,
   "tileyoff":0,
-  "tile_count":63,
+  "tile_count":54,
 }

@@ -33,10 +33,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_scarlet_house_mage",
-    "path":"sprites/spr_scarlet_house_mage/spr_scarlet_house_mage.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

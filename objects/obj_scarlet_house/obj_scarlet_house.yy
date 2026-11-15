@@ -29,10 +29,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_scarlet_house",
-    "path":"sprites/spr_scarlet_house/spr_scarlet_house.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

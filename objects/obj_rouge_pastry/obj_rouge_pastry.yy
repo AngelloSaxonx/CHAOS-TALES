@@ -33,10 +33,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_rouge_pastry",
-    "path":"sprites/spr_rouge_pastry/spr_rouge_pastry.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }
