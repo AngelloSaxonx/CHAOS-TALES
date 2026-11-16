@@ -131,7 +131,7 @@ scr_state_idle = function()
             }
         
         } else if attacking = true {
-            sprite_index = spr_flower_stab_1 //attacking!
+            sprite_index = spr_flower_stab //attacking!
         }
 	}
 	//Jump

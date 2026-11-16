@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_flower_slash_1",
-    "path":"sprites/spr_flower_slash_1/spr_flower_slash_1.yy",
+    "name":"spr_flower_slash",
+    "path":"sprites/spr_flower_slash/spr_flower_slash.yy",
   },
   "spriteMaskId":null,
   "visible":true,

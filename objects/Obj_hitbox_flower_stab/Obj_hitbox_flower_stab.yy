@@ -31,10 +31,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_flower_stab_hitbox",
-    "path":"sprites/spr_flower_stab_hitbox/spr_flower_stab_hitbox.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":false,
 }
