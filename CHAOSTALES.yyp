@@ -153,6 +153,7 @@
     {"id":{"name":"obj_warp","path":"objects/obj_warp/obj_warp.yy",},},
     {"id":{"name":"rm_darkfields_1","path":"rooms/rm_darkfields_1/rm_darkfields_1.yy",},},
     {"id":{"name":"rm_darkfields_2","path":"rooms/rm_darkfields_2/rm_darkfields_2.yy",},},
+    {"id":{"name":"rm_scarlet_equip1_0","path":"rooms/rm_scarlet_equip1_0/rm_scarlet_equip1_0.yy",},},
     {"id":{"name":"rm_scarlet_intro","path":"rooms/rm_scarlet_intro/rm_scarlet_intro.yy",},},
     {"id":{"name":"rm_titlescreen","path":"rooms/rm_titlescreen/rm_titlescreen.yy",},},
     {"id":{"name":"Test_1","path":"rooms/Test_1/Test_1.yy",},},
@@ -261,6 +262,7 @@
     {"roomId":{"name":"rm_darkfields_1","path":"rooms/rm_darkfields_1/rm_darkfields_1.yy",},},
     {"roomId":{"name":"rm_darkfields_2","path":"rooms/rm_darkfields_2/rm_darkfields_2.yy",},},
     {"roomId":{"name":"rm_scarlet_intro","path":"rooms/rm_scarlet_intro/rm_scarlet_intro.yy",},},
+    {"roomId":{"name":"rm_scarlet_equip1_0","path":"rooms/rm_scarlet_equip1_0/rm_scarlet_equip1_0.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
