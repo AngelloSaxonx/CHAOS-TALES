@@ -60,7 +60,7 @@ coyoteJumpTimer = 0;
 jspd = -4; 
 
 //cool attack
-attacking = false
+attacking = true
 
 
 can_dash = true;
@@ -71,6 +71,8 @@ ledge_fall_time = 20
 can_run = true; //sometimes Shenvin uses booleans and sometimes real numbers, depends on weather 
 double_jump = true;
 
+
+
 scr_state_idle = function()
 {
 	
@@ -78,9 +80,10 @@ scr_state_idle = function()
 
     if move_dir != 0 {face = move_dir};
 
-    
+    if attacking = false
+    {
     xspd = move_dir * move_spd;
-    
+    }
 
     
 	
@@ -97,7 +100,8 @@ scr_state_idle = function()
     
     scr_movement(); //not this script again :NotLikeRowlet: 
 	
-    //attacking! and attack checks
+    
+    //attacking! and attack checks, yeah a lot of them, i like if statements
     if attack_key
     {
         scr_state_attack()
@@ -111,7 +115,14 @@ scr_state_idle = function()
     {
         attacking = true
     }
-    
+    if on_ground = false
+    {
+        attacking = false
+    }
+    if attacking = true or place_meeting(x,y,obj_interact) or instance_exists(obj_textbox)
+    {
+        xspd = 0
+    }
     
 	
 	if on_ground
@@ -121,16 +132,23 @@ scr_state_idle = function()
         {
       		if abs(xspd) == 0 
       	    {
+                if sprite_index != idle_spr
+		        {image_index = 0}
                 sprite_index = idle_spr
       		} 
             //Walk
 		
             if abs(move_dir) == 1
             {
+                if sprite_index != walk_spr
+		        {image_index = 0}
     			sprite_index = walk_spr
             }
         
         } else if attacking = true {
+            
+            if sprite_index != spr_flower_stab {image_index = 0}
+            
             sprite_index = spr_flower_stab //attacking!
         }
 	}
@@ -149,6 +167,7 @@ scr_state_idle = function()
 			{
 				if (jump_key && on_ground=true) {image_index = 0} //Double jumping refresh animation
 			}
+            
 			sprite_index = jump1_spr
 		
 	}

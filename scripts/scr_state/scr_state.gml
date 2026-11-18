@@ -104,7 +104,7 @@ function scr_movement(){
 	}
 		
     y += yspd;    
-
+    
     on_ground = yspd >= 0 and place_meeting( x, y+1, obj_collision)
 	
 	
@@ -113,8 +113,9 @@ function scr_movement(){
 
 function scr_state_attack()
 {
-    
-    instance_create_depth(x,y, -9999, obj_slash)
-    
+    if attacking = false
+    {
+        instance_create_depth(x,y, -9999, obj_slash)
+    }
 }
 
