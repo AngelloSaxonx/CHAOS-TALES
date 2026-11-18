@@ -1,27 +1,27 @@
 {
   "$GMSprite":"v2",
-  "%Name":"scr_scarlet_house",
+  "%Name":"scr_scarlet_house_a",
   "bboxMode":0,
-  "bbox_bottom":99,
+  "bbox_bottom":119,
   "bbox_left":0,
-  "bbox_right":99,
-  "bbox_top":1,
+  "bbox_right":119,
+  "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"v1","%Name":"7dd6de75-8d02-48cc-8743-599d39e60023","name":"7dd6de75-8d02-48cc-8743-599d39e60023","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"4572c403-0832-4ae6-a668-8628b8b490dc","name":"4572c403-0832-4ae6-a668-8628b8b490dc","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":20,
   "gridY":20,
-  "height":100,
+  "height":120,
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"e8272dcf-1bbe-4b75-983b-ac2118f5d7cf","blendMode":0,"displayName":"default","isLocked":false,"name":"e8272dcf-1bbe-4b75-983b-ac2118f5d7cf","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"scr_scarlet_house",
+  "name":"scr_scarlet_house_a",
   "nineSlice":null,
   "origin":0,
   "parent":{
@@ -33,7 +33,7 @@
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"v1",
-    "%Name":"scr_scarlet_house",
+    "%Name":"scr_scarlet_house_a",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -57,7 +57,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"scr_scarlet_house",
+    "name":"scr_scarlet_house_a",
     "playback":1,
     "playbackSpeed":30.0,
     "playbackSpeedType":0,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"7dd6de75-8d02-48cc-8743-599d39e60023","path":"sprites/scr_scarlet_house/scr_scarlet_house.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"f04e323e-cfd1-4fd8-8d88-b7d282ed421d","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"4572c403-0832-4ae6-a668-8628b8b490dc","path":"sprites/scr_scarlet_house_a/scr_scarlet_house_a.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"91ee45d5-5946-418f-9f75-4adec2aef415","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":100,
+  "width":120,
 }
