@@ -28,7 +28,7 @@
   "origin":4,
   "parent":{
     "name":"bomb_throw",
-    "path":"folders/Sprites/Characters/Scarlet Fields/Enemies/Nako/Movement/Attacks/bomb_throw.yy",
+    "path":"folders/Sprites/Characters/Prologue/Scarlet Fields/Enemies/Nako/Movement/Attacks/bomb_throw.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

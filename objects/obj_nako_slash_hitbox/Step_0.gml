@@ -65,9 +65,9 @@ if (creatorId.image_xscale > 0) //if they are facing right
 if (creatorId.image_xscale < 0) //negative value means mirrored 
 	x = creatorId.x - creatorId.sprite_width/5  //subtract x offset 
 //position the hitbox 
-if creatorId.sprite_index = spr_nako_dash_swing_2
+if creatorId.sprite_index = spr_nako_dash_swing_b
 	y = creatorId.y - creatorId.sprite_height/5 
-if creatorId.sprite_index = spr_nako_dash_swing_4 
+if creatorId.sprite_index = spr_nako_dash_swing_d 
 	y = creatorId.y + creatorId.sprite_height/5 
 } //end creatorId actually existing 	
 else { //if they do not exist because Nako was defeated  

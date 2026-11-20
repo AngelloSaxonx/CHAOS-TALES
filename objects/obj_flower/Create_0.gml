@@ -9,8 +9,7 @@ mask_spr = spr_flower; //[Vibecode] [Refactor] - redundant variables and nonsens
 idle_spr = spr_flower;
 walk_spr = spr_flower_walk;
 ledge_spr = spr_flower_ledge_1
-jump1_spr = spr_flower_jump_1;
-jump2_spr = spr_flower_jump_2;
+jump1_spr = spr_flower_jump;
 round_spr = spr_flower_round;
 
 image_moving = 0; //bruh 
@@ -147,9 +146,9 @@ scr_state_idle = function()
         
         } else if attacking = true {
             
-            if sprite_index != spr_flower_stab {image_index = 0}
+            if sprite_index != spr_flower_stab_a {image_index = 0}
             
-            sprite_index = spr_flower_stab //attacking!
+            sprite_index = spr_flower_stab_a //attacking!
         }
 	}
 	//Jump

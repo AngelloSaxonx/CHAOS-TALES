@@ -1,4 +1,3 @@
 Berdly - Leader, Artist, Writer
-Resonance22Art - QA Lead, Sr. Engineer
-Hunter - Music
-Viktorey - Coder
+Resonance22Art - QA Lead, RPG Coder, Save Points Coder
+Viktorey - Platform Coder

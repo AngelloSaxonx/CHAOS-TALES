@@ -9,10 +9,9 @@ Chapter 7: Finale
 
 Prologue: Mt. Cursive
 -Scarlet Fields [1] (10%)
--Empty Town
--Octoberwasts [2] 
--Grounds2 [3]
--Petal Quarters [4]
+-Octoberfals [2] 
+-Stairway to Heights [3]
+-Green Petals [4]
 -Marshmallows [5]
 -Penumbra North [6]
 -Lost Home [7]

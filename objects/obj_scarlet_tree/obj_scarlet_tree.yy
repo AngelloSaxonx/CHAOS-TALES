@@ -9,7 +9,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Scarlet Fields",
-    "path":"folders/Objects/Prologue/Scarlet Fields.yy",
+    "path":"folders/Objects/Areas/Scarlet Fields.yy",
   },
   "parentObjectId":null,
   "persistent":false,

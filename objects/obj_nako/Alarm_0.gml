@@ -23,28 +23,28 @@ switch(nakoPhase)
 	and (y > TargetY) //the target is above us  
 	and (x < TargetX) //target is to the right 
 	{
-		sprite_index = spr_nako_dash_swing_1 //preparing to strike 
+		sprite_index = spr_nako_dash_swing_a //preparing to strike 
 		image_xscale = 1 //don't mirror 
 	}
 	if ((image_xscale > 0) or xspd > 0) //not mirrored 
 	and (y <= TargetY) //the target is below us  
 	and (x <= TargetX) //target is to the right 
 	{
-		sprite_index = spr_nako_dash_swing_3 //preparing to strike 
+		sprite_index = spr_nako_dash_swing_c //preparing to strike 
 		image_xscale = 1 //don't mirror 
 	}	
 	if ((image_xscale < 0) or (xspd < 0)) //Target Behind  
 	and (y > TargetY) //the target is above us  
 	and (x > TargetX) //target is to the left 
 	{
-		sprite_index = spr_nako_dash_swing_1 //preparing to strike 
+		sprite_index = spr_nako_dash_swing_a //preparing to strike 
 		image_xscale = -1 //mirror 
 	}	
 	if ((image_xscale < 0) or (xspd < 0)) //Target Behind 
 	and (y <= TargetY) //the target is below us  
 	and (x > TargetX) //target is to the left 
 	{
-		sprite_index = spr_nako_dash_swing_3 //preparing to strike 
+		sprite_index = spr_nako_dash_swing_c //preparing to strike 
 		image_xscale = -1 //mirror 
 	}		
 	
@@ -61,25 +61,25 @@ switch(nakoPhase)
 	}
 	
 	//alarm[0] = 60 
-	if sprite_index = spr_nako_dash_swing_1 
+	if sprite_index = spr_nako_dash_swing_a 
 	//and (image_xscale > 0) //not mirrored 
 	{
-		sprite_index = spr_nako_dash_swing_2 //upper cut 
+		sprite_index = spr_nako_dash_swing_b //upper cut 
 	}  
-	if sprite_index = spr_nako_dash_swing_3 
+	if sprite_index = spr_nako_dash_swing_c 
 	//and (image_xscale > 0) //not mirrored 
 	{
-		sprite_index = spr_nako_dash_swing_4 //down slash 
+		sprite_index = spr_nako_dash_swing_d //down slash 
 	}  	
 	
 	break; 
 	
 	case 2: //Pose after swing 
 	stopMovement = false 
-	if sprite_index = spr_nako_dash_swing_2 
-	sprite_index = spr_nako_dash_swing_1
-	if sprite_index = spr_nako_dash_swing_4
-	sprite_index = spr_nako_dash_swing_3
+	if sprite_index = spr_nako_dash_swing_b 
+	sprite_index = spr_nako_dash_swing_a
+	if sprite_index = spr_nako_dash_swing_d
+	sprite_index = spr_nako_dash_swing_c
 	//alarm[0] = 22 //the duration of obj_nako_slash_hitbox 
 	
 	break; 
