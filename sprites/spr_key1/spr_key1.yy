@@ -28,8 +28,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"spr_key1",
-    "path":"folders/Sprites/Gameplay/Money/spr_key1.yy",
+    "name":"Collectibles",
+    "path":"folders/Sprites/Gameplay/Collectibles.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

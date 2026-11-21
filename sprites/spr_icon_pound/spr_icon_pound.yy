@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Money",
-    "path":"folders/Sprites/Gameplay/Money.yy",
+    "name":"Collectibles",
+    "path":"folders/Sprites/Gameplay/Collectibles.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

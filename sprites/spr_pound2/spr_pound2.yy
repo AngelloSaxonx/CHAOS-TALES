@@ -26,7 +26,7 @@
   "origin":4,
   "parent":{
     "name":"spr_pound",
-    "path":"folders/Sprites/Gameplay/Money/spr_pound.yy",
+    "path":"folders/Sprites/Gameplay/Collectibles/spr_pound.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"spr_lock2",
-    "path":"folders/Sprites/Gameplay/Money/spr_lock2.yy",
+    "name":"Collectibles",
+    "path":"folders/Sprites/Gameplay/Collectibles.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
