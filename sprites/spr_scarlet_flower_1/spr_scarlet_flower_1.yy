@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"scarlet_flower",
-    "path":"folders/Sprites/Areas/Scarlet Fields/Gameplay/scarlet_flower.yy",
+    "name":"Gameplay",
+    "path":"folders/Sprites/Areas/Scarlet Fields/Gameplay.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

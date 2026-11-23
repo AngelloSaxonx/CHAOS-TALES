@@ -12,8 +12,8 @@ Prologue: Mt. Cursive
 -Octoberfals [2] 
 -Stairway to Heights [3]
 -Green Petals [4]
--Marshmallows [5]
--Penumbra North [6]
--Lost Home [7]
+-Marshwaters [5]
+-Pole Stars [6]
+-Ancient Cite [7]
 
 Chapter 1: 

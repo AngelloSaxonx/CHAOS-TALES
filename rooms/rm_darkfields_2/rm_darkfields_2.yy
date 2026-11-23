@@ -34,7 +34,7 @@
           -3,1,1,14,-10,-2147483648,6,12,1,1,6,1,14,-10,-2147483648,6,17,18,18,1,1,14,-10,-2147483648,6,22,23,
           23,18,18,19,-10,-2147483648,-3,0,-2,23,1,24,-10,-2147483648,3,2,3,3,-13,-2147483648,3,7,8,8,-13,3,3,
           12,1,1,-13,8,3,21,1,1,
-        ],"TileDataFormat":1,},"tilesetId":{"name":"ts_weird_fields_front","path":"tilesets/ts_weird_fields_front/ts_weird_fields_front.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
+        ],"TileDataFormat":1,},"tilesetId":{"name":"ts_darkfields","path":"tilesets/ts_darkfields/ts_darkfields.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":15.0,"animationSpeedType":0,"colour":4278190080,"depth":300,"effectEnabled":true,"effectType":null,"gridX":20,"gridY":20,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],
   "name":"rm_darkfields_2",
