@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Movement",
-    "path":"folders/Sprites/Characters/Party/Flower/Movement.yy",
+    "name":"Platformer",
+    "path":"folders/Sprites/Characters/Party/Flower/Platformer.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

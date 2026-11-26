@@ -32,7 +32,7 @@
   "origin":4,
   "parent":{
     "name":"flower_pogo",
-    "path":"folders/Sprites/Characters/Party/Flower/Movement/flower_pogo.yy",
+    "path":"folders/Sprites/Characters/Party/Flower/Platformer/flower_pogo.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

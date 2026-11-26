@@ -6,8 +6,8 @@
   "name":"obj_scarlet_flower",
   "overriddenProperties":[],
   "parent":{
-    "name":"Gameplay",
-    "path":"folders/Objects/Gameplay.yy",
+    "name":"Scarlet Fields",
+    "path":"folders/Objects/Gameplay/Scarlet Fields.yy",
   },
   "parentObjectId":null,
   "persistent":false,

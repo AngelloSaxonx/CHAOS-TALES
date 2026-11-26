@@ -26,7 +26,7 @@
   "origin":4,
   "parent":{
     "name":"flower_ledge",
-    "path":"folders/Sprites/Characters/Party/Flower/Movement/flower_ledge.yy",
+    "path":"folders/Sprites/Characters/Party/Flower/Platformer/flower_ledge.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
