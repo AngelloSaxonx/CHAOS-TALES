@@ -1,0 +1,1 @@
+instance_destroy() //we destroy slash as soon as the slash animation finishes

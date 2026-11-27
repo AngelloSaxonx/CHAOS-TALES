@@ -113,9 +113,31 @@ function scr_movement(){
 
 function scr_state_attack()
 {
+    
     if attacking = false
     {
-        instance_create_depth(x,y, -9999, obj_slash)
+        if on_ground = true
+        {
+            instance_create_depth(x,y, -9999, obj_slash)
+        }
+    }
+    if attacking_pogo = false
+    {
+        if on_ground = false {
+            instance_create_depth(x,y, -9999, obj_slash_pogo)
+        }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
 

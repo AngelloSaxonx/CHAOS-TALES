@@ -60,6 +60,7 @@ jspd = -4;
 
 //cool attack
 attacking = true
+attacking_pogo = false
 
 
 can_dash = true;
@@ -114,10 +115,33 @@ scr_state_idle = function()
     {
         attacking = true
     }
+    
+    
+    if instance_exists(obj_slash_pogo)
+    {
+        attacking_pogo = true
+    }
+    if !instance_exists(obj_slash_pogo)
+    {
+        attacking_pogo = false
+    }
+    
+    
     if on_ground = false
     {
         attacking = false
     }
+    
+    if on_ground = true
+    {
+        attacking_pogo = false
+    }
+    
+    if attacking_pogo = true and place_meeting(x,y, obj_scarlet_flower)
+    {
+        yspd = -8
+    }
+    
     if attacking = true or place_meeting(x,y,obj_interact) or instance_exists(obj_textbox)
     {
         xspd = 0
@@ -155,7 +179,10 @@ scr_state_idle = function()
 	else
 	{    
 	//Airdash
-		
+		if attacking_pogo = false
+        {
+            
+        
 		//Jump
 			if sprite_index != jump1_spr
 		    {
@@ -168,7 +195,11 @@ scr_state_idle = function()
 			}
             
 			sprite_index = jump1_spr
-		
+        } else if attacking_pogo = true{
+            if sprite_index != spr_flower_pogo_a {image_index = 0}
+                
+            sprite_index = spr_flower_pogo_a
+        }
 	}
 	
 };

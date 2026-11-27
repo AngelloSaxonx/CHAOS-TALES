@@ -101,7 +101,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2026.1.0.27",
+    "IDEVersion":"2026.1.1.34",
   },
   "name":"CHAOSTALES",
   "resources":[
@@ -131,6 +131,7 @@
     {"id":{"name":"obj_scarlet_teapot","path":"objects/obj_scarlet_teapot/obj_scarlet_teapot.yy",},},
     {"id":{"name":"obj_scarlet_test","path":"objects/obj_scarlet_test/obj_scarlet_test.yy",},},
     {"id":{"name":"obj_scarlet_tree","path":"objects/obj_scarlet_tree/obj_scarlet_tree.yy",},},
+    {"id":{"name":"obj_slash_pogo","path":"objects/obj_slash_pogo/obj_slash_pogo.yy",},},
     {"id":{"name":"obj_slash","path":"objects/obj_slash/obj_slash.yy",},},
     {"id":{"name":"obj_stats","path":"objects/obj_stats/obj_stats.yy",},},
     {"id":{"name":"obj_textbox","path":"objects/obj_textbox/obj_textbox.yy",},},
